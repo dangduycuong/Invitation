@@ -1,0 +1,25 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'Invitation' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for Invitation
+
+	pod 'RealmSwift', '10.25.1'
+	pod 'GoogleMaps', '6.1.1'
+	pod 'GooglePlaces', '6.1.1'
+	pod 'SlideMenuControllerSwift', '4.0.0'
+
+  target 'InvitationTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'InvitationUITests' do
+    # Pods for testing
+	
+  end
+
+end

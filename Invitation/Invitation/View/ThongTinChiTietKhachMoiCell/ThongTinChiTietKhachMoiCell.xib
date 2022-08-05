@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="607" id="KGk-i7-Jjw" customClass="ThongTinChiTietKhachMoiCell" customModule="Invitation" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="607"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="393" height="607"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" text="Anh" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="p58-K1-SYu">
+                        <rect key="frame" x="8" y="8" width="135.5" height="33"/>
+                        <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                    </textView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Eo1-NW-2J8">
+                        <rect key="frame" x="143.5" y="0.0" width="8" height="607"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="8" id="VNJ-07-1kY"/>
+                        </constraints>
+                    </view>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="4lh-Wm-JMG">
+                        <rect key="frame" x="151.5" y="8" width="193.5" height="279"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" text="Nguyễn Khánh Cao Tần" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="gi1-Et-1FX">
+                                <rect key="frame" x="0.0" y="0.0" width="193.5" height="33"/>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" text="1993" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="0ST-IV-7pv">
+                                <rect key="frame" x="0.0" y="41" width="193.5" height="33"/>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" keyboardType="numberPad"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" text="Nghệ An" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="sqz-7C-PMS">
+                                <rect key="frame" x="0.0" y="82" width="193.5" height="33"/>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" text="0972432405" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="3Tg-if-XUY">
+                                <rect key="frame" x="0.0" y="123" width="193.5" height="33"/>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" keyboardType="numberPad"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" text="500 000" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="a2O-iI-CtE">
+                                <rect key="frame" x="0.0" y="164" width="193.5" height="33"/>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" keyboardType="numberPad"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" text="500 000" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="2cC-eT-pTi">
+                                <rect key="frame" x="0.0" y="205" width="193.5" height="33"/>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" keyboardType="numberPad"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" scrollEnabled="NO" text="500 000" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="NG0-hD-RTb">
+                                <rect key="frame" x="0.0" y="246" width="193.5" height="33"/>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                    </stackView>
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" scrollEnabled="NO" text="Năm sinh" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="pU3-Km-d5M">
+                        <rect key="frame" x="8" y="49" width="135.5" height="33"/>
+                        <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                    </textView>
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" scrollEnabled="NO" text="Địa chỉ" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="45D-oC-86e">
+                        <rect key="frame" x="8" y="90" width="135.5" height="33"/>
+                        <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                    </textView>
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" scrollEnabled="NO" text="SĐT" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="pRF-nI-dH3">
+                        <rect key="frame" x="8" y="131" width="135.5" height="33"/>
+                        <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                    </textView>
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" scrollEnabled="NO" text="Tiền nhận" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="oe2-f6-NOY">
+                        <rect key="frame" x="8" y="172" width="135.5" height="33"/>
+                        <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                    </textView>
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" scrollEnabled="NO" text="Nợ" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="rRB-hz-Yhl">
+                        <rect key="frame" x="8" y="254" width="135.5" height="33"/>
+                        <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                    </textView>
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" scrollEnabled="NO" text="Ghi chú" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="O2m-dg-akA">
+                        <rect key="frame" x="8" y="295" width="59.5" height="33"/>
+                        <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                    </textView>
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Nợ" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="H9K-mV-Cc7">
+                        <rect key="frame" x="8" y="336" width="377" height="200"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="200" id="eLB-WE-B2u"/>
+                        </constraints>
+                        <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                    </textView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5vh-7v-8PD">
+                        <rect key="frame" x="345" y="127.5" width="48" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="Jc9-1l-Dll"/>
+                        </constraints>
+                        <state key="normal" image="icons8-contacts"/>
+                        <connections>
+                            <action selector="tapEditContact:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="swj-EA-u40"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9x8-nl-l5m">
+                        <rect key="frame" x="345" y="168.5" width="40" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="0iW-Kl-MLk"/>
+                            <constraint firstAttribute="width" constant="40" id="EfE-Qu-vtu"/>
+                        </constraints>
+                        <state key="normal" image="icons8-edit_filled"/>
+                        <connections>
+                            <action selector="tapEditTienNhan:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="gy0-TF-5E5"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hH0-vC-PpZ">
+                        <rect key="frame" x="345" y="209.5" width="40" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="Kwy-Wa-cRW"/>
+                            <constraint firstAttribute="width" constant="40" id="UnE-6C-UZj"/>
+                        </constraints>
+                        <state key="normal" image="icons8-edit_filled"/>
+                        <connections>
+                            <action selector="tapEditTienDiMung:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="bM0-0U-Aob"/>
+                        </connections>
+                    </button>
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" scrollEnabled="NO" text="Tiền đi" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Tnw-Gm-7Wv">
+                        <rect key="frame" x="8" y="213" width="135.5" height="33"/>
+                        <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                    </textView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="5vh-7v-8PD" firstAttribute="leading" secondItem="4lh-Wm-JMG" secondAttribute="trailing" id="3Fk-K8-tWD"/>
+                    <constraint firstItem="O2m-dg-akA" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="4VU-oW-VwC"/>
+                    <constraint firstItem="Eo1-NW-2J8" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" multiplier="0.75" id="8mN-va-BqR"/>
+                    <constraint firstItem="5vh-7v-8PD" firstAttribute="centerY" secondItem="pRF-nI-dH3" secondAttribute="centerY" id="9KO-W8-5cV"/>
+                    <constraint firstItem="4lh-Wm-JMG" firstAttribute="leading" secondItem="Eo1-NW-2J8" secondAttribute="trailing" id="BVP-TS-hRv"/>
+                    <constraint firstItem="H9K-mV-Cc7" firstAttribute="top" secondItem="O2m-dg-akA" secondAttribute="bottom" constant="8" id="Gda-K4-cEY"/>
+                    <constraint firstItem="rRB-hz-Yhl" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="GzA-a4-Wfo"/>
+                    <constraint firstItem="Eo1-NW-2J8" firstAttribute="leading" secondItem="45D-oC-86e" secondAttribute="trailing" id="IrQ-3Z-dxV"/>
+                    <constraint firstItem="pRF-nI-dH3" firstAttribute="top" secondItem="3Tg-if-XUY" secondAttribute="top" id="N6v-OZ-0ea"/>
+                    <constraint firstItem="O2m-dg-akA" firstAttribute="top" secondItem="4lh-Wm-JMG" secondAttribute="bottom" constant="8" id="NFH-CG-N0N"/>
+                    <constraint firstAttribute="trailing" secondItem="4lh-Wm-JMG" secondAttribute="trailing" constant="48" id="NW1-6R-5TR"/>
+                    <constraint firstItem="2cC-eT-pTi" firstAttribute="top" secondItem="Tnw-Gm-7Wv" secondAttribute="top" id="QNU-Fg-qUW"/>
+                    <constraint firstItem="Tnw-Gm-7Wv" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="T8W-l7-Mh8"/>
+                    <constraint firstAttribute="trailing" secondItem="hH0-vC-PpZ" secondAttribute="trailing" constant="8" id="UHk-SF-uxw"/>
+                    <constraint firstItem="hH0-vC-PpZ" firstAttribute="centerY" secondItem="Tnw-Gm-7Wv" secondAttribute="centerY" id="Uch-Vx-W5V"/>
+                    <constraint firstItem="Eo1-NW-2J8" firstAttribute="leading" secondItem="p58-K1-SYu" secondAttribute="trailing" id="UwS-s3-dur"/>
+                    <constraint firstAttribute="trailing" secondItem="H9K-mV-Cc7" secondAttribute="trailing" constant="8" id="Ww4-zw-HiW"/>
+                    <constraint firstItem="Eo1-NW-2J8" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Xjc-B7-gKj"/>
+                    <constraint firstItem="0ST-IV-7pv" firstAttribute="top" secondItem="pU3-Km-d5M" secondAttribute="top" id="Zp2-xw-3PZ"/>
+                    <constraint firstItem="Eo1-NW-2J8" firstAttribute="leading" secondItem="pRF-nI-dH3" secondAttribute="trailing" id="aj9-bR-Yo5"/>
+                    <constraint firstItem="p58-K1-SYu" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="b0g-5T-HeO"/>
+                    <constraint firstItem="H9K-mV-Cc7" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="c2p-Ps-nHp"/>
+                    <constraint firstItem="45D-oC-86e" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="c2x-ii-TrD"/>
+                    <constraint firstItem="Eo1-NW-2J8" firstAttribute="leading" secondItem="pU3-Km-d5M" secondAttribute="trailing" id="e91-vh-XZD"/>
+                    <constraint firstItem="Eo1-NW-2J8" firstAttribute="leading" secondItem="rRB-hz-Yhl" secondAttribute="trailing" id="eAP-15-tRF"/>
+                    <constraint firstItem="9x8-nl-l5m" firstAttribute="centerY" secondItem="oe2-f6-NOY" secondAttribute="centerY" id="eoK-8H-0Hz"/>
+                    <constraint firstItem="oe2-f6-NOY" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="g4s-KM-MDU"/>
+                    <constraint firstItem="Eo1-NW-2J8" firstAttribute="leading" secondItem="Tnw-Gm-7Wv" secondAttribute="trailing" id="g9J-7h-tye"/>
+                    <constraint firstItem="45D-oC-86e" firstAttribute="top" secondItem="sqz-7C-PMS" secondAttribute="top" id="iwy-wZ-seD"/>
+                    <constraint firstAttribute="trailing" secondItem="5vh-7v-8PD" secondAttribute="trailing" id="osM-YE-0zI"/>
+                    <constraint firstItem="pU3-Km-d5M" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="pRf-Ge-G6o"/>
+                    <constraint firstItem="p58-K1-SYu" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="pf5-yd-5VZ"/>
+                    <constraint firstItem="pRF-nI-dH3" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="q1V-Oh-OrP"/>
+                    <constraint firstItem="Eo1-NW-2J8" firstAttribute="leading" secondItem="oe2-f6-NOY" secondAttribute="trailing" id="qU5-jn-IIt"/>
+                    <constraint firstItem="NG0-hD-RTb" firstAttribute="top" secondItem="rRB-hz-Yhl" secondAttribute="top" id="tfq-KP-eWO"/>
+                    <constraint firstAttribute="bottom" secondItem="Eo1-NW-2J8" secondAttribute="bottom" id="wbO-se-QVu"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="H9K-mV-Cc7" secondAttribute="bottom" constant="8" id="wsH-IE-YV7"/>
+                    <constraint firstItem="a2O-iI-CtE" firstAttribute="top" secondItem="oe2-f6-NOY" secondAttribute="top" id="yFe-i9-SPC"/>
+                    <constraint firstAttribute="trailing" secondItem="9x8-nl-l5m" secondAttribute="trailing" constant="8" id="yY7-sA-Ylj"/>
+                    <constraint firstItem="4lh-Wm-JMG" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="z0u-lf-Uvx"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="addressTextView" destination="sqz-7C-PMS" id="ZqT-iN-DqM"/>
+                <outlet property="ageTextView" destination="0ST-IV-7pv" id="Tzn-Ba-9nh"/>
+                <outlet property="diaChiTextView" destination="45D-oC-86e" id="SG9-Bx-F1f"/>
+                <outlet property="editDiMungButton" destination="hH0-vC-PpZ" id="XLF-rg-SzC"/>
+                <outlet property="editTienNhanButton" destination="9x8-nl-l5m" id="h0B-Jj-30E"/>
+                <outlet property="ghiChuTextView" destination="O2m-dg-akA" id="I6a-jw-p52"/>
+                <outlet property="giftsMonneyTextView" destination="2cC-eT-pTi" id="ibm-JQ-KNG"/>
+                <outlet property="moneyReceivedTextView" destination="a2O-iI-CtE" id="hIp-9N-XbW"/>
+                <outlet property="namSinhTextView" destination="pU3-Km-d5M" id="qPw-SL-pmB"/>
+                <outlet property="nameTextView" destination="gi1-Et-1FX" id="EKf-8w-tKB"/>
+                <outlet property="noTextView" destination="rRB-hz-Yhl" id="Zze-VU-qsJ"/>
+                <outlet property="noteTextView" destination="H9K-mV-Cc7" id="2M0-6X-0dW"/>
+                <outlet property="oweTextView" destination="NG0-hD-RTb" id="U5O-DI-zJX"/>
+                <outlet property="phoneTextView" destination="3Tg-if-XUY" id="gMh-nT-SLZ"/>
+                <outlet property="relationTextView" destination="p58-K1-SYu" id="U7x-Tl-AcV"/>
+                <outlet property="sdtTextView" destination="pRF-nI-dH3" id="wwE-Ve-Vax"/>
+                <outlet property="tienDiTextView" destination="Tnw-Gm-7Wv" id="mlR-WK-uG6"/>
+                <outlet property="tienNhanTextView" destination="oe2-f6-NOY" id="n38-uN-4Do"/>
+            </connections>
+            <point key="canvasLocation" x="78.985507246376812" y="187.83482142857142"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="icons8-contacts" width="25" height="25"/>
+        <image name="icons8-edit_filled" width="25" height="25"/>
+    </resources>
+</document>
