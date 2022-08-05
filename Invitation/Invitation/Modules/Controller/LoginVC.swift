@@ -108,8 +108,41 @@ class LoginVC: BaseViewController, UITextFieldDelegate {
         imagePicker.delegate = self
     }
     
+    func localToUTC(dateStr: String) -> String? {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "h:mm a"
+        dateFormatter.calendar = Calendar.current
+        dateFormatter.timeZone = TimeZone.current
+        
+        if let date = dateFormatter.date(from: dateStr) {
+            dateFormatter.timeZone = TimeZone(abbreviation: "UTC")
+            dateFormatter.dateFormat = "H:mm:ss"
+        
+            return dateFormatter.string(from: date)
+        }
+        return nil
+    }
+
+    func utcToLocal(dateStr: String) -> String? {
+        //2022-08-05 09:51:51 UTC
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        dateFormatter.timeZone = TimeZone(abbreviation: "UTC")
+        
+        if let date = dateFormatter.date(from: dateStr) {
+            dateFormatter.timeZone = TimeZone.current
+            dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        
+            return dateFormatter.string(from: date)
+        }
+        return nil
+    }
+    
     @objc func tick() {
-        let isoDate = "2022-08-30 10:00:00"
+        guard let isoDate = utcToLocal(dateStr: "2022-08-05 09:51:51") else {
+            return
+        }
+//        let isoDate = "2022-08-05 17:30:00"
         
         let dateFormatter = DateFormatter()
         dateFormatter.locale = Locale(identifier: "en_US_POSIX")
@@ -213,16 +246,16 @@ class LoginVC: BaseViewController, UITextFieldDelegate {
             middleView.isHidden = false
             bottomLineUserView.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0.5019607843, alpha: 1)
             bottomLinePasswordView.backgroundColor = .darkGray
-            heightLineUserView.constant = 1.5
-            heightLinePasswordView.constant = 0.5
+//            heightLineUserView.constant = 1.5
+//            heightLinePasswordView.constant = 0.5
         case passwordTextField:
             topView.isHidden = true
             middleView.isHidden = false
             isHidenShowPassword = passwordTextField.text == ""
             bottomLineUserView.backgroundColor = .darkGray
             bottomLinePasswordView.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0.5019607843, alpha: 1)
-            heightLineUserView.constant = 0.5
-            heightLinePasswordView.constant = 1.5
+//            heightLineUserView.constant = 0.5
+//            heightLinePasswordView.constant = 1.5
         default:
             break
         }

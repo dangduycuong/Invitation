@@ -11,6 +11,7 @@ target 'Invitation' do
 	pod 'GoogleMaps', '6.1.1'
 	pod 'GooglePlaces', '6.1.1'
 	pod 'SlideMenuControllerSwift', '4.0.0'
+	pod 'IQKeyboardManagerSwift', '6.5.10'
 
   target 'InvitationTests' do
     inherit! :search_paths
