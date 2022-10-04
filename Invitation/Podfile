@@ -10,8 +10,9 @@ target 'Invitation' do
 	pod 'RealmSwift', '10.25.1'
 	pod 'GoogleMaps', '6.1.1'
 	pod 'GooglePlaces', '6.1.1'
-	pod 'SlideMenuControllerSwift', '4.0.0'
+	#pod 'SlideMenuControllerSwift', '4.0.0'
 	pod 'IQKeyboardManagerSwift', '6.5.10'
+	pod 'R.swift'
 
   target 'InvitationTests' do
     inherit! :search_paths

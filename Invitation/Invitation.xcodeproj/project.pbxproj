@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -95,6 +95,23 @@
 		D0A4C56B15F028CA33281A68 /* Pods_Invitation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7236BD14B286FA56613E484 /* Pods_Invitation.framework */; };
 		D4588CD64A4D6E0D533602B3 /* Pods_Invitation_InvitationUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81667D43A2D4B2698202D8AA /* Pods_Invitation_InvitationUITests.framework */; };
 		F4611A24B7506161DF1AA1CF /* Pods_InvitationTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9359A2A07DA175129B80DE87 /* Pods_InvitationTests.framework */; };
+		FA8A56C728EC32DD00806E37 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = FA8A56C328EC32DD00806E37 /* LICENSE */; };
+		FA8A56C828EC32DD00806E37 /* SlideMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8A56C528EC32DD00806E37 /* SlideMenuController.swift */; };
+		FA8A56C928EC32DD00806E37 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = FA8A56C628EC32DD00806E37 /* README.md */; };
+		FA8A56CD28EC346300806E37 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8A56CC28EC346300806E37 /* R.generated.swift */; };
+		FA8A56D228EC349000806E37 /* PlayfairDisplay-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FA8A56CF28EC348F00806E37 /* PlayfairDisplay-Bold.ttf */; };
+		FA8A56D328EC349000806E37 /* PlayfairDisplay-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FA8A56D028EC349000806E37 /* PlayfairDisplay-Italic.ttf */; };
+		FA8A56D428EC349000806E37 /* PlayfairDisplay-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FA8A56D128EC349000806E37 /* PlayfairDisplay-Regular.ttf */; };
+		FA8A56E328EC35C600806E37 /* WeatherViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8A56D728EC35C600806E37 /* WeatherViewModel.swift */; };
+		FA8A56E428EC35C600806E37 /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8A56D928EC35C600806E37 /* WeatherViewController.swift */; };
+		FA8A56E528EC35C600806E37 /* Metadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8A56DB28EC35C600806E37 /* Metadata.swift */; };
+		FA8A56E628EC35C600806E37 /* GoogleDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8A56DC28EC35C600806E37 /* GoogleDataProvider.swift */; };
+		FA8A56E728EC35C600806E37 /* GooglePlace.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8A56DD28EC35C600806E37 /* GooglePlace.swift */; };
+		FA8A56E828EC35C600806E37 /* PlaceMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8A56DE28EC35C600806E37 /* PlaceMarker.swift */; };
+		FA8A56E928EC35C600806E37 /* RealtimeWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8A56DF28EC35C600806E37 /* RealtimeWeather.swift */; };
+		FA8A56EA28EC35C600806E37 /* MarkerInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8A56E128EC35C600806E37 /* MarkerInfoView.swift */; };
+		FA8A56EB28EC35C600806E37 /* MarkerInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA8A56E228EC35C600806E37 /* MarkerInfoView.xib */; };
+		FA8A56EE28EC35D700806E37 /* Weather.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA8A56ED28EC35D700806E37 /* Weather.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -216,6 +233,23 @@
 		CEFC6A9C2581CE59001701BA /* VLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VLocation.swift; sourceTree = "<group>"; };
 		CEFC6AA02581DD92001701BA /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		D7236BD14B286FA56613E484 /* Pods_Invitation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Invitation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA8A56C328EC32DD00806E37 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		FA8A56C528EC32DD00806E37 /* SlideMenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideMenuController.swift; sourceTree = "<group>"; };
+		FA8A56C628EC32DD00806E37 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		FA8A56CC28EC346300806E37 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
+		FA8A56CF28EC348F00806E37 /* PlayfairDisplay-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PlayfairDisplay-Bold.ttf"; sourceTree = "<group>"; };
+		FA8A56D028EC349000806E37 /* PlayfairDisplay-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PlayfairDisplay-Italic.ttf"; sourceTree = "<group>"; };
+		FA8A56D128EC349000806E37 /* PlayfairDisplay-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PlayfairDisplay-Regular.ttf"; sourceTree = "<group>"; };
+		FA8A56D728EC35C600806E37 /* WeatherViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherViewModel.swift; sourceTree = "<group>"; };
+		FA8A56D928EC35C600806E37 /* WeatherViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
+		FA8A56DB28EC35C600806E37 /* Metadata.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Metadata.swift; sourceTree = "<group>"; };
+		FA8A56DC28EC35C600806E37 /* GoogleDataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleDataProvider.swift; sourceTree = "<group>"; };
+		FA8A56DD28EC35C600806E37 /* GooglePlace.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GooglePlace.swift; sourceTree = "<group>"; };
+		FA8A56DE28EC35C600806E37 /* PlaceMarker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceMarker.swift; sourceTree = "<group>"; };
+		FA8A56DF28EC35C600806E37 /* RealtimeWeather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealtimeWeather.swift; sourceTree = "<group>"; };
+		FA8A56E128EC35C600806E37 /* MarkerInfoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarkerInfoView.swift; sourceTree = "<group>"; };
+		FA8A56E228EC35C600806E37 /* MarkerInfoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MarkerInfoView.xib; sourceTree = "<group>"; };
+		FA8A56ED28EC35D700806E37 /* Weather.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Weather.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -347,6 +381,7 @@
 		CE4029A425787B820043EE29 /* Invitation */ = {
 			isa = PBXGroup;
 			children = (
+				FA8A56CB28EC344B00806E37 /* Resource */,
 				CE4029A525787B820043EE29 /* AppDelegate.swift */,
 				CE4029A725787B820043EE29 /* SceneDelegate.swift */,
 				CE5ED5CE258B39EE009B0870 /* Media */,
@@ -600,6 +635,8 @@
 		CE9608B52579DE6200946FE8 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				FA8A56D528EC35C600806E37 /* GoogleMap */,
+				FA8A56C228EC32DD00806E37 /* SlideMenuControllerSwift */,
 				CE665287259C0C59005EB71D /* MainSlide */,
 				CE9608B62579DE6E00946FE8 /* Tutorial */,
 				CE402A0D25787E480043EE29 /* Controller */,
@@ -617,6 +654,100 @@
 			path = Tutorial;
 			sourceTree = "<group>";
 		};
+		FA8A56C228EC32DD00806E37 /* SlideMenuControllerSwift */ = {
+			isa = PBXGroup;
+			children = (
+				FA8A56C328EC32DD00806E37 /* LICENSE */,
+				FA8A56C428EC32DD00806E37 /* Source */,
+				FA8A56C628EC32DD00806E37 /* README.md */,
+			);
+			path = SlideMenuControllerSwift;
+			sourceTree = "<group>";
+		};
+		FA8A56C428EC32DD00806E37 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				FA8A56C528EC32DD00806E37 /* SlideMenuController.swift */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		FA8A56CB28EC344B00806E37 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				FA8A56EC28EC35D700806E37 /* Storyboard */,
+				FA8A56CE28EC346C00806E37 /* Fonts */,
+				FA8A56CC28EC346300806E37 /* R.generated.swift */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		FA8A56CE28EC346C00806E37 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				FA8A56CF28EC348F00806E37 /* PlayfairDisplay-Bold.ttf */,
+				FA8A56D028EC349000806E37 /* PlayfairDisplay-Italic.ttf */,
+				FA8A56D128EC349000806E37 /* PlayfairDisplay-Regular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		FA8A56D528EC35C600806E37 /* GoogleMap */ = {
+			isa = PBXGroup;
+			children = (
+				FA8A56D628EC35C600806E37 /* ViewModel */,
+				FA8A56D828EC35C600806E37 /* Controller */,
+				FA8A56DA28EC35C600806E37 /* Model */,
+				FA8A56E028EC35C600806E37 /* View */,
+			);
+			path = GoogleMap;
+			sourceTree = "<group>";
+		};
+		FA8A56D628EC35C600806E37 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FA8A56D728EC35C600806E37 /* WeatherViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		FA8A56D828EC35C600806E37 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FA8A56D928EC35C600806E37 /* WeatherViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		FA8A56DA28EC35C600806E37 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FA8A56DB28EC35C600806E37 /* Metadata.swift */,
+				FA8A56DC28EC35C600806E37 /* GoogleDataProvider.swift */,
+				FA8A56DD28EC35C600806E37 /* GooglePlace.swift */,
+				FA8A56DE28EC35C600806E37 /* PlaceMarker.swift */,
+				FA8A56DF28EC35C600806E37 /* RealtimeWeather.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FA8A56E028EC35C600806E37 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FA8A56E128EC35C600806E37 /* MarkerInfoView.swift */,
+				FA8A56E228EC35C600806E37 /* MarkerInfoView.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FA8A56EC28EC35D700806E37 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				FA8A56ED28EC35D700806E37 /* Weather.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -625,6 +756,7 @@
 			buildConfigurationList = CE4029CC25787B830043EE29 /* Build configuration list for PBXNativeTarget "Invitation" */;
 			buildPhases = (
 				4F95A25508C164E198237609 /* [CP] Check Pods Manifest.lock */,
+				FA8A56CA28EC340000806E37 /* ShellScript */,
 				CE40299E25787B820043EE29 /* Sources */,
 				CE40299F25787B820043EE29 /* Frameworks */,
 				CE4029A025787B820043EE29 /* Resources */,
@@ -730,7 +862,9 @@
 			files = (
 				CE5ED5DA258B4728009B0870 /* DeleteDataCell.xib in Resources */,
 				CE4029FD25787DF90043EE29 /* BaseAlert.storyboard in Resources */,
+				FA8A56D228EC349000806E37 /* PlayfairDisplay-Bold.ttf in Resources */,
 				81035300258C82F200CAA044 /* ShowPasswordView.xib in Resources */,
+				FA8A56C728EC32DD00806E37 /* LICENSE in Resources */,
 				CE7A7410259577C100C025EF /* ThongTinChiTietKhachMoiCell.xib in Resources */,
 				CE9608B42579D85D00946FE8 /* MenuLeftCell.xib in Resources */,
 				CE2484E1257A17780054E198 /* WeddingImageCell.xib in Resources */,
@@ -741,12 +875,17 @@
 				CE402A1E25788DDF0043EE29 /* ChoseContactCell.xib in Resources */,
 				810F3D0D257A0B5900AD3854 /* TutorialStoryboard.storyboard in Resources */,
 				CE5ED5D3258B4541009B0870 /* DeleteDataView.xib in Resources */,
+				FA8A56D328EC349000806E37 /* PlayfairDisplay-Italic.ttf in Resources */,
 				CE4029E625787DAC0043EE29 /* InfoDropDown.plist in Resources */,
 				CE402A0825787E110043EE29 /* KhachMoiCell.xib in Resources */,
+				FA8A56EB28EC35C600806E37 /* MarkerInfoView.xib in Resources */,
+				FA8A56EE28EC35D700806E37 /* Weather.storyboard in Resources */,
 				CE4029E525787DAC0043EE29 /* DropDownCell.xib in Resources */,
 				CE0DF6E225807E9200953B46 /* HistoryCell.xib in Resources */,
+				FA8A56D428EC349000806E37 /* PlayfairDisplay-Regular.ttf in Resources */,
 				CE665289259C0C66005EB71D /* MainSlide.storyboard in Resources */,
 				CE4029AD25787B820043EE29 /* Main.storyboard in Resources */,
+				FA8A56C928EC32DD00806E37 /* README.md in Resources */,
 				CE5ED5D0258B3A14009B0870 /* StrangeZero.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -902,6 +1041,25 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Invitation-InvitationUITests/Pods-Invitation-InvitationUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		FA8A56CA28EC340000806E37 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				$SRCROOT/R.generated.swift,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/R.generated.swift\"\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -931,15 +1089,21 @@
 				CE402A212578B3DD0043EE29 /* Constant.swift in Sources */,
 				81EE342525930C5600A6CF12 /* LoginVC.swift in Sources */,
 				CE0DF6DB258079F700953B46 /* HistoryVC.swift in Sources */,
+				FA8A56E528EC35C600806E37 /* Metadata.swift in Sources */,
 				810352FD258C6C7B00CAA044 /* GetPasswordView.swift in Sources */,
 				CEE47B1F2595EDBC004512A4 /* GuestDetailsVC.swift in Sources */,
 				CE80A70B2588BC82007410F1 /* HomeViewController.swift in Sources */,
+				FA8A56E328EC35C600806E37 /* WeatherViewModel.swift in Sources */,
+				FA8A56E928EC35C600806E37 /* RealtimeWeather.swift in Sources */,
 				CE20440D2581BEE800662FBB /* NSMutableAttributedString.swift in Sources */,
 				CE4029EB25787DAC0043EE29 /* DropDownCell.swift in Sources */,
 				CE402A272578B65F0043EE29 /* Int.swift in Sources */,
 				CE402A1525787E480043EE29 /* ThemKhachMoiVC.swift in Sources */,
 				CE0DF6E82580C95B00953B46 /* PopupEditTienMungVC.swift in Sources */,
+				FA8A56C828EC32DD00806E37 /* SlideMenuController.swift in Sources */,
+				FA8A56E828EC35C600806E37 /* PlaceMarker.swift in Sources */,
 				CE2484DA257A04BF0054E198 /* TutorialVC.swift in Sources */,
+				FA8A56CD28EC346300806E37 /* R.generated.swift in Sources */,
 				CE0DF6DD25807B4500953B46 /* DirectVC.swift in Sources */,
 				8174CEA8259315F800876CA1 /* Date.swift in Sources */,
 				CEFC6A9D2581CE59001701BA /* VLocation.swift in Sources */,
@@ -963,13 +1127,17 @@
 				CE402A1325787E480043EE29 /* ChonDiaDiemVC.swift in Sources */,
 				CE2484DC257A159E0054E198 /* WeddingPhotoListVC.swift in Sources */,
 				CE66528B259C0CAB005EB71D /* MainSlideMenuViewController.swift in Sources */,
+				FA8A56E628EC35C600806E37 /* GoogleDataProvider.swift in Sources */,
 				CE402A1D25788DDF0043EE29 /* ChoseContactCell.swift in Sources */,
 				CE4029E725787DAC0043EE29 /* DPDKeyboardListener.swift in Sources */,
 				CE66528D259C1315005EB71D /* LeftViewController.swift in Sources */,
+				FA8A56E728EC35C600806E37 /* GooglePlace.swift in Sources */,
 				CE4029FF25787DF90043EE29 /* BaseTableViewCell.swift in Sources */,
 				CE402A1925788CB20043EE29 /* FetchedContactModel.swift in Sources */,
+				FA8A56EA28EC35C600806E37 /* MarkerInfoView.swift in Sources */,
 				CE201D702589F7C800BFE412 /* ChangeInfomationUserView.swift in Sources */,
 				CE0DF6E62580BFC200953B46 /* Double.swift in Sources */,
+				FA8A56E428EC35C600806E37 /* WeatherViewController.swift in Sources */,
 				CE4029EC25787DAC0043EE29 /* DropDown+Appearance.swift in Sources */,
 				CE7A740F259577C100C025EF /* ThongTinChiTietKhachMoiCell.swift in Sources */,
 			);
@@ -1146,7 +1314,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = S36XF6BCMY;
+				DEVELOPMENT_TEAM = 4LW34R6CMB;
 				INFOPLIST_FILE = Invitation/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (

@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import SlideMenuControllerSwift
+//import SlideMenuControllerSwift
 
 class MainSlideMenuViewController: SlideMenuController {
     

@@ -12,13 +12,17 @@ import GooglePlaces
 import UserNotifications
 import IQKeyboardManagerSwift
 
+//let googleApiKey = "AIzaSyC6a50plf6zJbvuBcmzBpRd3CQp4BRy1yI"
+let googleApiKey = "AIzaSyBjK7ZifDuLbogjhWx9XjpIcRlczC6c-I0"
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        let GOOGLE_MAP_API_KEY = "AIzaSyC6a50plf6zJbvuBcmzBpRd3CQp4BRy1yI" //key vsmart
-        GMSServices.provideAPIKey(GOOGLE_MAP_API_KEY)
+//        let GOOGLE_MAP_API_KEY = "AIzaSyC6a50plf6zJbvuBcmzBpRd3CQp4BRy1yI" //key vsmart
+        
+        GMSServices.provideAPIKey(googleApiKey)
         GMSPlacesClient.provideAPIKey("AIzaSyANQclsIUV880B7njDUtqiL1IlbwR61lSM")
         //xin quyen local notification
         UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound]) { (granted, err) in
