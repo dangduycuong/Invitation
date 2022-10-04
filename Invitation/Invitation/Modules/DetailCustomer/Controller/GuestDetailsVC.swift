@@ -2,8 +2,8 @@
 //  GuestDetailsVC.swift
 //  Invitation
 //
-//  Created by Dang Duy Cuong on 12/25/20.
-//  Copyright © 2020 Dang Duy Cuong. All rights reserved.
+//  Created by cuongdd on 04/10/2022.
+//  Copyright © 2022 Dang Duy Cuong. All rights reserved.
 //
 
 import UIKit
@@ -327,12 +327,17 @@ class GuestDetailsVC: BaseViewController {
     }
     
     @IBAction func tapSelectMap(_ sender: Any) {
-        title = ""
-        let vc = Storyboard.Main.chonDiaDiemVC()
-        vc.titleString = "Nhà khách mời"
-        vc.passCoordinate = { [weak self] infoKM in
-            self?.longitudeTextView.text = "\(infoKM.longitude)"
-            self?.latitudeTextView.text = "\(infoKM.latitude)"
+//        title = ""
+//        let vc = Storyboard.Main.chonDiaDiemVC()
+//        vc.titleString = "Nhà khách mời"
+//        vc.passCoordinate = { [weak self] infoKM in
+//            self?.longitudeTextView.text = "\(infoKM.longitude)"
+//            self?.latitudeTextView.text = "\(infoKM.latitude)"
+//        }
+//        navigationController?.pushViewController(vc, animated: true)
+        
+        guard let vc = R.storyboard.weather.weatherViewController() else {
+            return
         }
         navigationController?.pushViewController(vc, animated: true)
     }
@@ -551,3 +556,4 @@ extension GuestDetailsVC: UITextViewDelegate {
         }
     }
 }
+

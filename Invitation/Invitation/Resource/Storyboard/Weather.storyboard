@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -11,7 +11,7 @@
         <array key="PlayfairDisplay-ExtraBold.ttf">
             <string>PlayfairDisplay-ExtraBold</string>
         </array>
-        <array key="PlayfairDisplay-VariableFont_wght.ttf">
+        <array key="PlayfairDisplay-Regular.ttf">
             <string>PlayfairDisplay-Regular</string>
         </array>
     </customFonts>
@@ -19,13 +19,13 @@
         <!--Weather View Controller-->
         <scene sceneID="JSW-XF-hau">
             <objects>
-                <viewController storyboardIdentifier="WeatherViewController" id="g5G-qm-9c5" customClass="WeatherViewController" customModule="RealmTasks" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WeatherViewController" id="g5G-qm-9c5" customClass="WeatherViewController" customModule="Invitation" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fVa-Hc-CIx">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CAH-5s-ita" customClass="GMSMapView">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tib-0c-g1f">
@@ -132,6 +132,7 @@
                         <constraints>
                             <constraint firstItem="UF2-IJ-BBw" firstAttribute="trailing" secondItem="icA-RQ-W00" secondAttribute="trailing" constant="8" id="4oT-8D-X9c"/>
                             <constraint firstItem="icA-RQ-W00" firstAttribute="leading" secondItem="UF2-IJ-BBw" secondAttribute="leading" constant="8" id="9lR-2G-VFL"/>
+                            <constraint firstItem="CAH-5s-ita" firstAttribute="top" secondItem="UF2-IJ-BBw" secondAttribute="top" id="CGn-to-5gJ"/>
                             <constraint firstItem="UF2-IJ-BBw" firstAttribute="trailing" secondItem="tib-0c-g1f" secondAttribute="trailing" id="E81-Eg-F91"/>
                             <constraint firstItem="icA-RQ-W00" firstAttribute="top" secondItem="UF2-IJ-BBw" secondAttribute="top" constant="8" id="LUE-3f-Ua2"/>
                             <constraint firstItem="UF2-IJ-BBw" firstAttribute="bottom" secondItem="tib-0c-g1f" secondAttribute="bottom" id="VbK-vv-Veh"/>
@@ -139,7 +140,6 @@
                             <constraint firstItem="CAH-5s-ita" firstAttribute="leading" secondItem="fVa-Hc-CIx" secondAttribute="leading" id="X2P-FO-UDm"/>
                             <constraint firstItem="UF2-IJ-BBw" firstAttribute="centerY" secondItem="emV-hr-lso" secondAttribute="bottom" id="XrS-Lp-Rx2"/>
                             <constraint firstItem="UF2-IJ-BBw" firstAttribute="centerX" secondItem="emV-hr-lso" secondAttribute="centerX" id="YyN-ML-wzx"/>
-                            <constraint firstItem="CAH-5s-ita" firstAttribute="top" secondItem="fVa-Hc-CIx" secondAttribute="top" id="hpq-ok-dWT"/>
                             <constraint firstAttribute="trailing" secondItem="CAH-5s-ita" secondAttribute="trailing" id="mU5-Pa-Vrd"/>
                             <constraint firstAttribute="bottom" secondItem="CAH-5s-ita" secondAttribute="bottom" id="zmo-yD-y4b"/>
                         </constraints>

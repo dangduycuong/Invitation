@@ -224,4 +224,19 @@ extension UIViewController {
 //        }
     }
     
+    func setupNavigationBar() {
+        let appearance = UINavigationBarAppearance()
+        appearance.configureWithOpaqueBackground()
+        appearance.backgroundColor = #colorLiteral(red: 0.1411764771, green: 0.3960784376, blue: 0.5647059083, alpha: 1)
+        let paragraphStyle = NSMutableParagraphStyle()
+        let attributes: [NSAttributedString.Key: Any] = [
+            .font: R.font.playfairDisplayBold(size: 17) as Any,
+            .foregroundColor: UIColor.white,
+            .paragraphStyle: paragraphStyle,
+        ]
+        appearance.titleTextAttributes = attributes
+        navigationController?.navigationBar.standardAppearance = appearance
+        navigationController?.navigationBar.scrollEdgeAppearance = navigationController?.navigationBar.standardAppearance
+    }
+    
 }

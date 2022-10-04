@@ -89,7 +89,6 @@
 		CE80A70B2588BC82007410F1 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE80A70A2588BC82007410F1 /* HomeViewController.swift */; };
 		CE9608B32579D85D00946FE8 /* MenuLeftCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9608B12579D85D00946FE8 /* MenuLeftCell.swift */; };
 		CE9608B42579D85D00946FE8 /* MenuLeftCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE9608B22579D85D00946FE8 /* MenuLeftCell.xib */; };
-		CEE47B1F2595EDBC004512A4 /* GuestDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE47B1E2595EDBC004512A4 /* GuestDetailsVC.swift */; };
 		CEFC6A9D2581CE59001701BA /* VLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFC6A9C2581CE59001701BA /* VLocation.swift */; };
 		CEFC6AA12581DD92001701BA /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFC6AA02581DD92001701BA /* MapViewController.swift */; };
 		D0A4C56B15F028CA33281A68 /* Pods_Invitation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7236BD14B286FA56613E484 /* Pods_Invitation.framework */; };
@@ -112,6 +111,7 @@
 		FA8A56EA28EC35C600806E37 /* MarkerInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8A56E128EC35C600806E37 /* MarkerInfoView.swift */; };
 		FA8A56EB28EC35C600806E37 /* MarkerInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA8A56E228EC35C600806E37 /* MarkerInfoView.xib */; };
 		FA8A56EE28EC35D700806E37 /* Weather.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA8A56ED28EC35D700806E37 /* Weather.storyboard */; };
+		FA8A56F228EC38CE00806E37 /* GuestDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8A56F128EC38CE00806E37 /* GuestDetailsVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -229,7 +229,6 @@
 		CE80A70A2588BC82007410F1 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		CE9608B12579D85D00946FE8 /* MenuLeftCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuLeftCell.swift; sourceTree = "<group>"; };
 		CE9608B22579D85D00946FE8 /* MenuLeftCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuLeftCell.xib; sourceTree = "<group>"; };
-		CEE47B1E2595EDBC004512A4 /* GuestDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestDetailsVC.swift; sourceTree = "<group>"; };
 		CEFC6A9C2581CE59001701BA /* VLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VLocation.swift; sourceTree = "<group>"; };
 		CEFC6AA02581DD92001701BA /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		D7236BD14B286FA56613E484 /* Pods_Invitation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Invitation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -250,6 +249,7 @@
 		FA8A56E128EC35C600806E37 /* MarkerInfoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarkerInfoView.swift; sourceTree = "<group>"; };
 		FA8A56E228EC35C600806E37 /* MarkerInfoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MarkerInfoView.xib; sourceTree = "<group>"; };
 		FA8A56ED28EC35D700806E37 /* Weather.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Weather.storyboard; sourceTree = "<group>"; };
+		FA8A56F128EC38CE00806E37 /* GuestDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestDetailsVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -546,7 +546,6 @@
 				810352F7258C6BCF00CAA044 /* GetPasswordVC.swift */,
 				81EE342425930C5600A6CF12 /* LoginVC.swift */,
 				CE7A741125957C7E00C025EF /* ChiTietGhiNoVC.swift */,
-				CEE47B1E2595EDBC004512A4 /* GuestDetailsVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -635,6 +634,7 @@
 		CE9608B52579DE6200946FE8 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				FA8A56EF28EC385600806E37 /* DetailCustomer */,
 				FA8A56D528EC35C600806E37 /* GoogleMap */,
 				FA8A56C228EC32DD00806E37 /* SlideMenuControllerSwift */,
 				CE665287259C0C59005EB71D /* MainSlide */,
@@ -746,6 +746,22 @@
 				FA8A56ED28EC35D700806E37 /* Weather.storyboard */,
 			);
 			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		FA8A56EF28EC385600806E37 /* DetailCustomer */ = {
+			isa = PBXGroup;
+			children = (
+				FA8A56F028EC386A00806E37 /* Controller */,
+			);
+			path = DetailCustomer;
+			sourceTree = "<group>";
+		};
+		FA8A56F028EC386A00806E37 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FA8A56F128EC38CE00806E37 /* GuestDetailsVC.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1079,6 +1095,7 @@
 				CE4029F425787DD20043EE29 /* String.swift in Sources */,
 				CE4029ED25787DAC0043EE29 /* TableView.swift in Sources */,
 				CE4029F225787DD20043EE29 /* UIView.swift in Sources */,
+				FA8A56F228EC38CE00806E37 /* GuestDetailsVC.swift in Sources */,
 				CE402A0C25787E2C0043EE29 /* ThongTinKhachMoiModel.swift in Sources */,
 				CE2484E0257A17780054E198 /* WeddingImageCell.swift in Sources */,
 				CE4029D625787D860043EE29 /* Storyboard.swift in Sources */,
@@ -1091,7 +1108,6 @@
 				CE0DF6DB258079F700953B46 /* HistoryVC.swift in Sources */,
 				FA8A56E528EC35C600806E37 /* Metadata.swift in Sources */,
 				810352FD258C6C7B00CAA044 /* GetPasswordView.swift in Sources */,
-				CEE47B1F2595EDBC004512A4 /* GuestDetailsVC.swift in Sources */,
 				CE80A70B2588BC82007410F1 /* HomeViewController.swift in Sources */,
 				FA8A56E328EC35C600806E37 /* WeatherViewModel.swift in Sources */,
 				FA8A56E928EC35C600806E37 /* RealtimeWeather.swift in Sources */,
@@ -1316,7 +1332,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4LW34R6CMB;
 				INFOPLIST_FILE = Invitation/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1336,7 +1352,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S36XF6BCMY;
 				INFOPLIST_FILE = Invitation/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

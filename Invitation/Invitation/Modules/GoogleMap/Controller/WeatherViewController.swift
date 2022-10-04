@@ -110,6 +110,12 @@ extension WeatherViewController {
         weatherInfoView.layer.shadowRadius = 2
         weatherInfoView.layer.cornerRadius = 10
         weatherInfoView.isHidden = true
+        
+        navigationBarButtonItems([(ItemType.back, ItemPosition.left), (ItemType.rightMenu, ItemPosition.right)])
+    }
+    
+    override func openRightMenu() {
+        
     }
     
     @objc private func changeMapType(notification: Notification) {

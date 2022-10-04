@@ -9,24 +9,40 @@
 import UIKit
 
 class BaseNavigationController: UINavigationController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-//        navigationBar.isTranslucent = false
-//        navigationBar.barTintColor = Constant.color.blueVSmart
-                navigationBar.barTintColor = #colorLiteral(red: 0.1411764771, green: 0.3960784376, blue: 0.5647059083, alpha: 1)
-//        navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white, NSAttributedString.Key.font: Constant.font.robotoBold(ofSize: 17)]
-        let attrs = [
+//        //        navigationBar.isTranslucent = false
+//        //        navigationBar.barTintColor = Constant.color.blueVSmart
+//        navigationBar.barTintColor = #colorLiteral(red: 0.1411764771, green: 0.3960784376, blue: 0.5647059083, alpha: 1)
+//        //        navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white, NSAttributedString.Key.font: Constant.font.robotoBold(ofSize: 17)]
+//        let attrs = [
+//            //            NSAttributedString.Key.foregroundColor: UIColor.white,
+//            //            NSAttributedString.Key.font: UIFont(name: "Georgia-Bold", size: 17)!
+//            
 //            NSAttributedString.Key.foregroundColor: UIColor.white,
 //            NSAttributedString.Key.font: UIFont(name: "Georgia-Bold", size: 17)!
-            
-            NSAttributedString.Key.foregroundColor: UIColor.white,
-            NSAttributedString.Key.font: UIFont(name: "Georgia-Bold", size: 17)!
+//        ]
+//
+//        UINavigationBar.appearance().titleTextAttributes = attrs
+//        navigationBar.tintColor = .white
+//        //        BroadCastNewInfoModel.sharedInstance.isAdded = false
+        showNavigationBar()
+    }
+    
+    private func showNavigationBar() {
+        let appearance = UINavigationBarAppearance()
+        appearance.configureWithOpaqueBackground()
+        appearance.backgroundColor = #colorLiteral(red: 0.1411764771, green: 0.3960784376, blue: 0.5647059083, alpha: 1)
+        let paragraphStyle = NSMutableParagraphStyle()
+        let attributes: [NSAttributedString.Key: Any] = [
+            .font: R.font.playfairDisplayBold(size: 17) as Any,
+            .foregroundColor: UIColor.white,
+            .paragraphStyle: paragraphStyle,
         ]
-
-        UINavigationBar.appearance().titleTextAttributes = attrs
-        navigationBar.tintColor = .white
-//        BroadCastNewInfoModel.sharedInstance.isAdded = false
+        appearance.titleTextAttributes = attributes
+        navigationController?.navigationBar.standardAppearance = appearance
+        navigationController?.navigationBar.scrollEdgeAppearance = navigationController?.navigationBar.standardAppearance
     }
 }
 
