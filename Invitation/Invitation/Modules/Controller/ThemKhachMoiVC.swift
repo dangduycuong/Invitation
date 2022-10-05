@@ -56,12 +56,6 @@ class ThemKhachMoiVC: BaseViewController, UITextViewDelegate {
     var tienNhanLabel = UILabel()
     
     var dataKM = ThongTinKhachMoiModel()
-    
-    var scrollKeybard: CGFloat = 0 {
-        didSet {
-            self.view.frame.origin.y = scrollKeybard
-        }
-    }
     var listBirth = [String]()
     var suggestBirth = [String]()
     
@@ -251,9 +245,6 @@ class ThemKhachMoiVC: BaseViewController, UITextViewDelegate {
         case chiTietQuanHeTextView:
             filterRelation()
             showRelation()
-        //            scrollKeybard = -100
-        case noteTextView:
-            scrollKeybard = -200
         default:
             break
         }
@@ -359,10 +350,6 @@ class ThemKhachMoiVC: BaseViewController, UITextViewDelegate {
             break
         }
         return true
-    }
-    
-    func textViewDidEndEditing(_ textView: UITextView) {
-        scrollKeybard = 0
     }
     
     @IBAction func tapGetContact(_ sender: Any) {

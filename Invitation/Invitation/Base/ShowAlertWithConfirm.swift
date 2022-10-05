@@ -26,9 +26,42 @@ class ShowAlertWithConfirm: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupUI()
         setViewAlert()
         setAlert()
         setShadowView()
+    }
+    
+    private func setupUI() {
+        let style = NSMutableParagraphStyle()
+        style.lineSpacing = 6
+        style.alignment = .center
+        
+        let attributes: [NSAttributedString.Key: Any] = [
+            .font: R.font.playfairDisplayBold(size: 17) as Any,
+            .foregroundColor: UIColor.black,
+            .paragraphStyle: style
+        ]
+        
+        let attributeString = NSAttributedString(string: alertType.text, attributes: attributes)
+        self.titleLabel.attributedText = attributeString
+    }
+    
+    private func setupButton(foregroundColor: UIColor) {
+        let style = NSMutableParagraphStyle()
+        style.lineSpacing = 6
+        style.alignment = .center
+        
+        let attributes: [NSAttributedString.Key: Any] = [
+            .font: R.font.playfairDisplayRegular(size: 17) as Any,
+            .foregroundColor: foregroundColor,
+            .paragraphStyle: style
+        ]
+        
+        var attributeString = NSAttributedString(string: "Đồng Ý", attributes: attributes)
+        okButton.setAttributedTitle(attributeString, for: .normal)
+        attributeString = NSAttributedString(string: "Hủy", attributes: attributes)
+        cancelButton.setAttributedTitle(attributeString, for: .normal)
     }
     
     func setShadowView() {
@@ -48,7 +81,6 @@ class ShowAlertWithConfirm: UIViewController {
     }
     
     func setAlert() {
-        titleLabel.text = alertType.text
         setupMessageContentText(string: message)
     }
     
@@ -71,8 +103,9 @@ class ShowAlertWithConfirm: UIViewController {
         }
         titleLabel.textColor = textColor
         titleView.backgroundColor = background
-        cancelButton.setTitleColor(textColor, for: .normal)
-        okButton.setTitleColor(textColor, for: .normal)
+//        cancelButton.setTitleColor(textColor, for: .normal)
+//        okButton.setTitleColor(textColor, for: .normal)
+        setupButton(foregroundColor: textColor)
     }
     
     func setupMessageContentText(string: String) {
@@ -80,10 +113,11 @@ class ShowAlertWithConfirm: UIViewController {
         style.lineSpacing = 6
         style.alignment = .left
         
-        let attributes : [NSAttributedString.Key : Any] =
-            [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 14.0),
-             NSAttributedString.Key.foregroundColor : UIColor.black,
-             NSAttributedString.Key.paragraphStyle : style]
+        let attributes: [NSAttributedString.Key: Any] = [
+            .font: R.font.playfairDisplayRegular(size: 17) as Any,
+            .foregroundColor: UIColor.black,
+            .paragraphStyle: style
+        ]
         
         let attributeString = NSAttributedString(string: string, attributes: attributes)
         self.messageLabel.attributedText = attributeString

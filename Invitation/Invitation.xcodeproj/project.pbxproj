@@ -119,6 +119,8 @@
 		FA8A56EB28EC35C600806E37 /* MarkerInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA8A56E228EC35C600806E37 /* MarkerInfoView.xib */; };
 		FA8A56EE28EC35D700806E37 /* Weather.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA8A56ED28EC35D700806E37 /* Weather.storyboard */; };
 		FA8A56F228EC38CE00806E37 /* GuestDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8A56F128EC38CE00806E37 /* GuestDetailsVC.swift */; };
+		FADDBA3428EDE62500381236 /* TitleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FADDBA3328EDE62500381236 /* TitleView.xib */; };
+		FADDBA3628EDE63600381236 /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADDBA3528EDE63600381236 /* TitleView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -264,6 +266,8 @@
 		FA8A56E228EC35C600806E37 /* MarkerInfoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MarkerInfoView.xib; sourceTree = "<group>"; };
 		FA8A56ED28EC35D700806E37 /* Weather.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Weather.storyboard; sourceTree = "<group>"; };
 		FA8A56F128EC38CE00806E37 /* GuestDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestDetailsVC.swift; sourceTree = "<group>"; };
+		FADDBA3328EDE62500381236 /* TitleView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TitleView.xib; sourceTree = "<group>"; };
+		FADDBA3528EDE63600381236 /* TitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -651,6 +655,7 @@
 		CE9608B52579DE6200946FE8 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				FADDBA3028EDE5FF00381236 /* Home */,
 				FA370D2C28ED88FE004C41CA /* Landing */,
 				FA8A56EF28EC385600806E37 /* DetailCustomer */,
 				FA8A56D528EC35C600806E37 /* GoogleMap */,
@@ -809,6 +814,31 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		FADDBA3028EDE5FF00381236 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				FADDBA3128EDE60700381236 /* View */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		FADDBA3128EDE60700381236 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FADDBA3228EDE60E00381236 /* TitleView */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FADDBA3228EDE60E00381236 /* TitleView */ = {
+			isa = PBXGroup;
+			children = (
+				FADDBA3328EDE62500381236 /* TitleView.xib */,
+				FADDBA3528EDE63600381236 /* TitleView.swift */,
+			);
+			path = TitleView;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -930,6 +960,7 @@
 				CE9608B42579D85D00946FE8 /* MenuLeftCell.xib in Resources */,
 				CE2484E1257A17780054E198 /* WeddingImageCell.xib in Resources */,
 				CE4029B225787B830043EE29 /* LaunchScreen.storyboard in Resources */,
+				FADDBA3428EDE62500381236 /* TitleView.xib in Resources */,
 				CE4029AF25787B830043EE29 /* Assets.xcassets in Resources */,
 				810352FB258C6C6E00CAA044 /* GetPasswordView.xib in Resources */,
 				CE201D722589F7D100BFE412 /* ChangeInfomationUserView.xib in Resources */,
@@ -1168,6 +1199,7 @@
 				FA8A56E828EC35C600806E37 /* PlaceMarker.swift in Sources */,
 				CE2484DA257A04BF0054E198 /* TutorialVC.swift in Sources */,
 				FA8A56CD28EC346300806E37 /* R.generated.swift in Sources */,
+				FADDBA3628EDE63600381236 /* TitleView.swift in Sources */,
 				CE0DF6DD25807B4500953B46 /* DirectVC.swift in Sources */,
 				8174CEA8259315F800876CA1 /* Date.swift in Sources */,
 				CEFC6A9D2581CE59001701BA /* VLocation.swift in Sources */,

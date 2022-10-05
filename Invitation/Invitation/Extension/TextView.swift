@@ -6,21 +6,20 @@
 //  Copyright © 2020 Dang Duy Cuong. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
 extension UITextView {
     
     func setDefaultFont() {
-        self.font = Constant.font.robotoRegular(ofSize: 16)
+        self.font = R.font.playfairDisplayRegular(size: 17)
     }
     
     func setDeFaultButtonFont() {
-        self.font = Constant.font.robotoMedium(ofSize: 16)
+        self.font = R.font.playfairDisplayRegular(size: 17)
     }
     
     func setDefaultTitleField(){
-        self.font = Constant.font.robotoRegular(ofSize: 14)
+        self.font = R.font.playfairDisplayBold(size: 17)
         self.textColor = UIColor.darkGray
     }
 }

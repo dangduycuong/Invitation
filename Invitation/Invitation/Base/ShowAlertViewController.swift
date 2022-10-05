@@ -51,12 +51,23 @@ class ShowAlertViewController: UIViewController {
         }
         iconImageView.image = UIImage(named: resourceName)
         titleView.backgroundColor = background
-        noticeTextView.textColor = textColor
+        
+        let style = NSMutableParagraphStyle()
+        style.lineSpacing = 6
+        style.alignment = .left
+        
+        let attributes: [NSAttributedString.Key : Any] = [
+            .font: R.font.playfairDisplayBold(size: 17) as Any,
+            .foregroundColor: textColor,
+            .paragraphStyle: style
+        ]
+        
+        let attributeString = NSAttributedString(string: type.text, attributes: attributes)
+        noticeTextView.attributedText = attributeString
+        closeButton.setAttributedTitle(NSAttributedString(string: "OK", attributes: attributes), for: .normal)
     }
     
     func setAlert() {
-//        titleLabel.text = type.text
-        noticeTextView.text = type.text
         setupMessageContentText(string: message)
     }
     
@@ -78,10 +89,11 @@ class ShowAlertViewController: UIViewController {
         style.lineSpacing = 6
         style.alignment = .left
         
-        let attributes : [NSAttributedString.Key : Any] =
-            [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 14.0),
-             NSAttributedString.Key.foregroundColor : UIColor.black,
-             NSAttributedString.Key.paragraphStyle : style]
+        let attributes: [NSAttributedString.Key : Any] = [
+            .font: R.font.playfairDisplayRegular(size: 17) as Any,
+            .foregroundColor : UIColor.black,
+            .paragraphStyle : style
+        ]
         
         let attributeString = NSAttributedString(string: string, attributes: attributes)
         self.messageTextView.attributedText = attributeString

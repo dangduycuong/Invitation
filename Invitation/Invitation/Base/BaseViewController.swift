@@ -91,7 +91,7 @@ class BaseViewController: UIViewController, UIGestureRecognizerDelegate {
     
     func setPlaceholder(textView: UITextView, label: UILabel, text: String) {
         label.text = text
-        label.font = UIFont.italicSystemFont(ofSize: (textView.font?.pointSize)!)
+        label.font = R.font.playfairDisplayItalic(size: 17)
         label.sizeToFit()
         textView.addSubview(label)
         label.frame.origin = CGPoint(x: 5, y: (textView.font?.pointSize)! / 2)

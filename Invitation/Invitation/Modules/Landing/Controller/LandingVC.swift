@@ -26,7 +26,11 @@ class LandingVC: UIViewController {
     
     private func gotoMainApp() {
         let mainSlideMenuViewController = Storyboard.MainSlide.mainSlideMenuViewController()
-        UIApplication.shared.keyWindow?.rootViewController = mainSlideMenuViewController
+        UIApplication
+            .shared
+            .connectedScenes
+            .flatMap { ($0 as? UIWindowScene)?.windows ?? [] }
+            .first { $0.isKeyWindow }?.rootViewController = mainSlideMenuViewController
     }
     
     private func gotoLogin() {
@@ -34,7 +38,11 @@ class LandingVC: UIViewController {
             return
         }
         let baseNC = BaseNavigationController(rootViewController: vc)
-        UIApplication.shared.keyWindow?.rootViewController = baseNC
+        UIApplication
+            .shared
+            .connectedScenes
+            .flatMap { ($0 as? UIWindowScene)?.windows ?? [] }
+            .first { $0.isKeyWindow }?.rootViewController = baseNC
     }
 
 }

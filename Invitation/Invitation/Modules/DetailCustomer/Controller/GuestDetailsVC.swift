@@ -62,12 +62,6 @@ class GuestDetailsVC: BaseViewController {
     var tienDiMungLabel = UILabel()
     var tienKhachMungLabel = UILabel()
     
-    var scrollKeybard: CGFloat = 0 {
-        didSet {
-            self.view.frame.origin.y = scrollKeybard
-        }
-    }
-    
     var changeDiMungByPopup: Bool = true
     var changeTienNhanByPopup: Bool = true
     
@@ -424,7 +418,6 @@ class GuestDetailsVC: BaseViewController {
     }
     
     func textViewDidEndEditing(_ textView: UITextView) {
-        scrollKeybard = 0
         switch textView {
         case diMungTextView:
             if diMungTextView.text == "" {
@@ -465,8 +458,6 @@ extension GuestDetailsVC: UITextViewDelegate {
             if nhanTextView.text == "0" {
                 nhanTextView.text = ""
             }
-        case noteTextView:
-            scrollKeybard = -200
         case longitudeTextView:
             changeKeyboardTypeDuringRuntime()
         case latitudeTextView:

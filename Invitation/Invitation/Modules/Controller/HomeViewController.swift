@@ -27,6 +27,11 @@ class HomeViewController: BaseViewController, UITextFieldDelegate {
     @IBOutlet weak var displayItemSelectLabel: UILabel!
     @IBOutlet weak var selectAllItemImageView: UIImageView!
     
+    lazy private var titleView: UIView = {
+        let view: TitleView = TitleView.loadFromNib()
+        return view
+    }()
+    
     let realm = try! Realm()
     var totalKhach = [ThongTinKhachMoiModel]()
     var listKM = [ThongTinKhachMoiModel]()
@@ -45,6 +50,8 @@ class HomeViewController: BaseViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupUI()
+        addObserver()
         setupNavigationBar()
         navigationController?.navigationBar.isHidden = false
         
@@ -71,7 +78,7 @@ class HomeViewController: BaseViewController, UITextFieldDelegate {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        title = "Minh Dương ❦ Phương Huyền"
+//        title = "Minh Dương ❦ Phương Huyền"
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -202,6 +209,30 @@ class HomeViewController: BaseViewController, UITextFieldDelegate {
     //        }
     //        present(vc, animated: true, completion: nil)
     //    }
+    
+    private func setupUI() {
+        let paragraphStyle = NSMutableParagraphStyle()
+        var attributes: [NSAttributedString.Key : Any] = [
+            .font: R.font.playfairDisplayRegular(size: 17) as Any,
+            .foregroundColor: UIColor.white,
+            .paragraphStyle: paragraphStyle,
+        ]
+        segmentedControl.setTitleTextAttributes(attributes, for: .normal)
+        attributes = [
+            .font: R.font.playfairDisplayRegular(size: 17) as Any,
+            .foregroundColor: #colorLiteral(red: 0.1411764771, green: 0.3960784376, blue: 0.5647059083, alpha: 1),
+            .paragraphStyle: paragraphStyle,
+        ]
+        segmentedControl.setTitleTextAttributes(attributes, for: .selected)
+        segmentedControl.backgroundColor = #colorLiteral(red: 0.1411764771, green: 0.3960784376, blue: 0.5647059083, alpha: 1)
+        navigationItem.titleView = titleView
+    }
+    
+    private func addObserver() {
+        if let titleView = titleView as? TitleView {
+            titleView.fillData()
+        }
+    }
     
     
     func selectActionMenu(_ action: ActionMainMenuView) {

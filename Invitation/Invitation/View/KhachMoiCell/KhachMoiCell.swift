@@ -54,18 +54,12 @@ class KhachMoiCell: BaseTableViewCell, UITextViewDelegate {
     
     func checkSelect(index: IndexPath, isDelete: Bool) {
         if isDelete {
-            controlConstraint.constant = 8
+            controlConstraint.constant = 16
             checkImageView.isHidden = false
-//            if let isDelete = listODF[index.row].isDelete {
-//                if isDelete {
-//                    checkImageView.image = #imageLiteral(resourceName: "icons8-checked_checkbox")
-//                } else {
-//                    checkImageView.image = #imageLiteral(resourceName: "icons8-unchecked_checkbox")
-//                }
-//            }
             checkImageView.image = infoKhachMoi.isDelete ? UIImage(named: "icons8-checked_checkbox") : UIImage(named: "icons8-unchecked_checkbox")
         } else {
-            controlConstraint.constant = -28
+            checkImageView.isHidden = true
+            controlConstraint.constant = -12
         }
         
     }

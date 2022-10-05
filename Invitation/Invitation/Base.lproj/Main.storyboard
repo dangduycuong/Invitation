@@ -8,6 +8,14 @@
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="PlayfairDisplay-Bold.ttf">
+            <string>PlayfairDisplay-Bold</string>
+        </array>
+        <array key="PlayfairDisplay-Regular.ttf">
+            <string>PlayfairDisplay-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--LoginVC-->
         <scene sceneID="ce5-vy-02r">
@@ -592,66 +600,147 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lmy-NV-xTZ">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="840"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lmy-NV-xTZ">
+                                <rect key="frame" x="0.0" y="44" width="414" height="770"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="inz-OJ-LhF" userLabel="Content View">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1792"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="646"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EbQ-d1-gn1">
-                                                <rect key="frame" x="151.5" y="0.0" width="8" height="3584"/>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="8" id="FAy-hr-YyQ"/>
-                                                </constraints>
-                                            </view>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Wy0-A8-m6D">
-                                                <rect key="frame" x="159.5" y="8" width="206.5" height="279"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Wy0-A8-m6D">
+                                                <rect key="frame" x="149.5" y="8" width="248.5" height="378"/>
                                                 <subviews>
-                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" text="Duy Cường" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Tjs-0f-vMC">
-                                                        <rect key="frame" x="0.0" y="0.0" width="206.5" height="33"/>
+                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" text="1992" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Tjs-0f-vMC">
+                                                        <rect key="frame" x="0.0" y="0.0" width="248.5" height="33"/>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                         <color key="textColor" systemColor="labelColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                     </textView>
-                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" text="1890" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="AeK-UM-DNq">
-                                                        <rect key="frame" x="0.0" y="41" width="206.5" height="33"/>
+                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" text="1992" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="AeK-UM-DNq">
+                                                        <rect key="frame" x="0.0" y="49" width="248.5" height="33"/>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                         <color key="textColor" systemColor="labelColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences" keyboardType="numberPad"/>
                                                     </textView>
-                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="gai-n6-9n1">
-                                                        <rect key="frame" x="0.0" y="82" width="206.5" height="33"/>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yxv-nt-1In" userLabel="Phone View">
+                                                        <rect key="frame" x="0.0" y="98" width="248.5" height="50"/>
+                                                        <subviews>
+                                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" text="1992" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="gai-n6-9n1">
+                                                                <rect key="frame" x="0.0" y="0.0" width="152.5" height="50"/>
+                                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                <color key="textColor" systemColor="labelColor"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                            </textView>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bDj-Rg-mQS">
+                                                                <rect key="frame" x="160.5" y="5" width="40" height="40"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="40" id="0KC-y3-ljn"/>
+                                                                    <constraint firstAttribute="width" constant="40" id="qQW-oZ-R51"/>
+                                                                </constraints>
+                                                                <state key="normal" image="icons8-contacts"/>
+                                                                <connections>
+                                                                    <action selector="tapGetContact:" destination="fXe-9Y-xPB" eventType="touchUpInside" id="MEt-cK-RqE"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I26-pQ-vBQ">
+                                                                <rect key="frame" x="208.5" y="5" width="40" height="40"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="40" id="9mL-8V-4SC"/>
+                                                                    <constraint firstAttribute="width" constant="40" id="qmk-Ok-Xa2"/>
+                                                                </constraints>
+                                                                <state key="normal" image="icons8-outgoing_call"/>
+                                                                <connections>
+                                                                    <action selector="tapCalling:" destination="fXe-9Y-xPB" eventType="touchUpInside" id="wWh-Wr-bm1"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <constraints>
+                                                            <constraint firstItem="bDj-Rg-mQS" firstAttribute="leading" secondItem="gai-n6-9n1" secondAttribute="trailing" constant="8" id="65u-xn-u5e"/>
+                                                            <constraint firstItem="I26-pQ-vBQ" firstAttribute="leading" secondItem="bDj-Rg-mQS" secondAttribute="trailing" constant="8" id="8CD-Ly-FaZ"/>
+                                                            <constraint firstItem="gai-n6-9n1" firstAttribute="top" secondItem="Yxv-nt-1In" secondAttribute="top" id="8M7-cb-Nmt"/>
+                                                            <constraint firstAttribute="trailing" secondItem="I26-pQ-vBQ" secondAttribute="trailing" id="TWG-C1-c0M"/>
+                                                            <constraint firstItem="gai-n6-9n1" firstAttribute="leading" secondItem="Yxv-nt-1In" secondAttribute="leading" id="cTQ-xV-keS"/>
+                                                            <constraint firstItem="I26-pQ-vBQ" firstAttribute="centerY" secondItem="Yxv-nt-1In" secondAttribute="centerY" id="fVz-KV-Fw9"/>
+                                                            <constraint firstAttribute="bottom" secondItem="gai-n6-9n1" secondAttribute="bottom" id="slD-ZB-C7r"/>
+                                                            <constraint firstItem="bDj-Rg-mQS" firstAttribute="centerY" secondItem="Yxv-nt-1In" secondAttribute="centerY" id="ubf-IV-cCD"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vl0-We-9cT" userLabel="Di MungView">
+                                                        <rect key="frame" x="0.0" y="164" width="248.5" height="50"/>
+                                                        <subviews>
+                                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" text="1992" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="EYw-64-jNl">
+                                                                <rect key="frame" x="0.0" y="0.0" width="200.5" height="50"/>
+                                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                <color key="textColor" systemColor="labelColor"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" keyboardType="numberPad"/>
+                                                            </textView>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A6S-tJ-xIk">
+                                                                <rect key="frame" x="208.5" y="5" width="40" height="40"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="40" id="19g-wL-Jv0"/>
+                                                                    <constraint firstAttribute="width" constant="40" id="H4c-CS-keF"/>
+                                                                </constraints>
+                                                                <state key="normal" image="icons8-edit_filled"/>
+                                                                <connections>
+                                                                    <action selector="tapEditTienDiMung:" destination="fXe-9Y-xPB" eventType="touchUpInside" id="fCx-od-YcI"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <constraints>
+                                                            <constraint firstItem="A6S-tJ-xIk" firstAttribute="centerY" secondItem="Vl0-We-9cT" secondAttribute="centerY" id="Jhp-ec-hhM"/>
+                                                            <constraint firstItem="EYw-64-jNl" firstAttribute="leading" secondItem="Vl0-We-9cT" secondAttribute="leading" id="PHL-Mw-Cdh"/>
+                                                            <constraint firstItem="A6S-tJ-xIk" firstAttribute="leading" secondItem="EYw-64-jNl" secondAttribute="trailing" constant="8" id="eKx-F8-Ui2"/>
+                                                            <constraint firstAttribute="bottom" secondItem="EYw-64-jNl" secondAttribute="bottom" id="h52-Rm-xBh"/>
+                                                            <constraint firstAttribute="trailing" secondItem="A6S-tJ-xIk" secondAttribute="trailing" id="rL0-SM-eWz"/>
+                                                            <constraint firstItem="EYw-64-jNl" firstAttribute="top" secondItem="Vl0-We-9cT" secondAttribute="top" id="wfo-g7-fet"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DFb-bf-YKZ" userLabel="Nhan Mung View">
+                                                        <rect key="frame" x="0.0" y="230" width="248.5" height="50"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JyG-fV-pgY">
+                                                                <rect key="frame" x="208.5" y="5" width="40" height="40"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="40" id="OnI-Xs-1Fn"/>
+                                                                    <constraint firstAttribute="height" constant="40" id="hTS-ho-QAZ"/>
+                                                                </constraints>
+                                                                <state key="normal" image="icons8-edit_filled"/>
+                                                                <connections>
+                                                                    <action selector="tapEditTienNhan:" destination="fXe-9Y-xPB" eventType="touchUpInside" id="Twb-tn-g8v"/>
+                                                                </connections>
+                                                            </button>
+                                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" text="1992" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="GYP-vS-V8R">
+                                                                <rect key="frame" x="0.0" y="0.0" width="200.5" height="50"/>
+                                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                <color key="textColor" systemColor="labelColor"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" keyboardType="numberPad"/>
+                                                            </textView>
+                                                        </subviews>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <constraints>
+                                                            <constraint firstItem="JyG-fV-pgY" firstAttribute="centerY" secondItem="DFb-bf-YKZ" secondAttribute="centerY" id="40P-Pj-3ux"/>
+                                                            <constraint firstItem="GYP-vS-V8R" firstAttribute="leading" secondItem="DFb-bf-YKZ" secondAttribute="leading" id="Rv0-j7-Nqj"/>
+                                                            <constraint firstItem="GYP-vS-V8R" firstAttribute="top" secondItem="DFb-bf-YKZ" secondAttribute="top" id="UYH-M4-Ryu"/>
+                                                            <constraint firstAttribute="trailing" secondItem="JyG-fV-pgY" secondAttribute="trailing" id="s68-pe-PDp"/>
+                                                            <constraint firstAttribute="bottom" secondItem="GYP-vS-V8R" secondAttribute="bottom" id="skq-3o-jvH"/>
+                                                            <constraint firstItem="JyG-fV-pgY" firstAttribute="leading" secondItem="GYP-vS-V8R" secondAttribute="trailing" constant="8" id="wbV-A5-Q3o"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" text="1992" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ms2-yw-SON">
+                                                        <rect key="frame" x="0.0" y="296" width="248.5" height="33"/>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                         <color key="textColor" systemColor="labelColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                     </textView>
-                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="EYw-64-jNl">
-                                                        <rect key="frame" x="0.0" y="123" width="206.5" height="33"/>
-                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                        <color key="textColor" systemColor="labelColor"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences" keyboardType="numberPad"/>
-                                                    </textView>
-                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" text="1890" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="GYP-vS-V8R">
-                                                        <rect key="frame" x="0.0" y="164" width="206.5" height="33"/>
-                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                        <color key="textColor" systemColor="labelColor"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences" keyboardType="numberPad"/>
-                                                    </textView>
-                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" scrollEnabled="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ms2-yw-SON">
-                                                        <rect key="frame" x="0.0" y="205" width="206.5" height="33"/>
-                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                        <color key="textColor" systemColor="labelColor"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                                    </textView>
-                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="A71-Js-ZfR">
-                                                        <rect key="frame" x="0.0" y="246" width="206.5" height="33"/>
+                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" text="1992" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="A71-Js-ZfR">
+                                                        <rect key="frame" x="0.0" y="345" width="248.5" height="33"/>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                         <color key="textColor" systemColor="labelColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -660,66 +749,66 @@
                                                 </subviews>
                                             </stackView>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" text="Bác" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="eHy-jI-iPw">
-                                                <rect key="frame" x="8" y="8" width="143.5" height="33"/>
+                                                <rect key="frame" x="16" y="8" width="34.5" height="33"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <color key="textColor" systemColor="labelColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" scrollEnabled="NO" text="Năm sinh" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="bBr-XX-O24">
-                                                <rect key="frame" x="8" y="49" width="143.5" height="33"/>
+                                                <rect key="frame" x="16" y="57" width="70.5" height="33"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <color key="textColor" systemColor="labelColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" keyboardType="numberPad"/>
                                             </textView>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" scrollEnabled="NO" text="Số điện thoại" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="adJ-qO-KDl">
-                                                <rect key="frame" x="8" y="90" width="143.5" height="33"/>
+                                                <rect key="frame" x="16" y="106" width="101.5" height="33"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <color key="textColor" systemColor="labelColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" scrollEnabled="NO" text="Đi mừng" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="9tN-GK-J8H">
-                                                <rect key="frame" x="8" y="131" width="143.5" height="33"/>
+                                                <rect key="frame" x="16" y="172" width="65" height="33"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <color key="textColor" systemColor="labelColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" scrollEnabled="NO" text="Nhận mừng" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="JRi-Pd-5Bb">
-                                                <rect key="frame" x="8" y="172" width="143.5" height="33"/>
+                                                <rect key="frame" x="16" y="238" width="85" height="33"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <color key="textColor" systemColor="labelColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" scrollEnabled="NO" text="Nợ" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="aKY-uU-eCk">
-                                                <rect key="frame" x="8" y="213" width="143.5" height="33"/>
+                                                <rect key="frame" x="16" y="304" width="28.5" height="33"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <color key="textColor" systemColor="labelColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" scrollEnabled="NO" text="Địa chỉ" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="chy-fk-rrO">
-                                                <rect key="frame" x="8" y="254" width="143.5" height="33"/>
+                                                <rect key="frame" x="16" y="353" width="54.5" height="33"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <color key="textColor" systemColor="labelColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="FnO-7E-b4x">
-                                                <rect key="frame" x="159.5" y="295" width="206.5" height="74"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="FnO-7E-b4x">
+                                                <rect key="frame" x="149.5" y="402" width="200.5" height="82"/>
                                                 <subviews>
                                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Q7b-3F-ge0">
-                                                        <rect key="frame" x="0.0" y="0.0" width="206.5" height="33"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="200.5" height="33"/>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                         <color key="textColor" systemColor="labelColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                     </textView>
                                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="hhG-JA-qSV">
-                                                        <rect key="frame" x="0.0" y="41" width="206.5" height="33"/>
+                                                        <rect key="frame" x="0.0" y="49" width="200.5" height="33"/>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                         <color key="textColor" systemColor="labelColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -728,107 +817,38 @@
                                                 </subviews>
                                             </stackView>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" scrollEnabled="NO" text="Kinh độ" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="iC5-O8-Jx2">
-                                                <rect key="frame" x="8" y="295" width="143.5" height="33"/>
+                                                <rect key="frame" x="16" y="402" width="59.5" height="33"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <color key="textColor" systemColor="labelColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" scrollEnabled="NO" text="Vĩ độ" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="hZo-Fh-fhj">
-                                                <rect key="frame" x="8" y="336" width="143.5" height="33"/>
+                                                <rect key="frame" x="16" y="451" width="43.5" height="33"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <color key="textColor" systemColor="labelColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9Uu-sf-BsS">
-                                                <rect key="frame" x="159.5" y="377" width="51" height="31"/>
+                                                <rect key="frame" x="349" y="500" width="51" height="31"/>
                                             </switch>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" scrollEnabled="NO" text="Trạng thái mời" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Xww-nQ-BxP">
-                                                <rect key="frame" x="8" y="376" width="143.5" height="33"/>
+                                                <rect key="frame" x="16" y="499" width="102" height="33"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <color key="textColor" systemColor="labelColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" scrollEnabled="NO" text="Ghi chú" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Ayh-2I-9AM">
-                                                <rect key="frame" x="8" y="417" width="143.5" height="33"/>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="sH4-JA-Ldb">
+                                                <rect key="frame" x="16" y="581" width="382" height="33"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <color key="textColor" systemColor="labelColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="sH4-JA-Ldb">
-                                                <rect key="frame" x="8" y="458" width="398" height="1134"/>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                <string key="text">I'm trying to pick image from device's Photo Library in method:
-
-func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any])
-{
-
-    userPhoto.image = info[UIImagePickerControllerOriginalImage] as! UIImage?
-    userPhoto.contentMode = .scaleAspectFill
-    userPhoto.clipsToBounds = true
-
-    dismiss(animated: true, completion: nil)
-}
-and save this picture in Realm (as NSData):
-
-asset.assetImage = UIImagePNGRepresentation(userPhoto.image!)! as NSData?
-...
-
-   try! myRealm.write
-        {
-            user.assetsList.append(asset)
-            myRealm.add(user)
-        }
-After build succeeded and trying to pick and save image (in the app) i have app error: 'Binary too big'
-
-What i'm doing wrong?
-
-P.S. Sorry for my English :)
-
-After some actions i have this code. But it's overwrite my image.
-
-func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any])
-{
-    let imageUrl = info[UIImagePickerControllerReferenceURL] as! NSURL
-    let imageName = imageUrl.lastPathComponent
-    let documentDirectory = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first!
-    let photoURL = NSURL(fileURLWithPath: documentDirectory)
-    let localPath = photoURL.appendingPathComponent(imageName!)
-    let image = info[UIImagePickerControllerOriginalImage]as! UIImage
-    let data = UIImagePNGRepresentation(image)
-
-    do</string>
-                                                <color key="textColor" systemColor="labelColor"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                            </textView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bDj-Rg-mQS">
-                                                <rect key="frame" x="326" y="86.5" width="40" height="40"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="40" id="0KC-y3-ljn"/>
-                                                    <constraint firstAttribute="width" constant="40" id="qQW-oZ-R51"/>
-                                                </constraints>
-                                                <state key="normal" image="icons8-contacts"/>
-                                                <connections>
-                                                    <action selector="tapGetContact:" destination="fXe-9Y-xPB" eventType="touchUpInside" id="MEt-cK-RqE"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I26-pQ-vBQ">
-                                                <rect key="frame" x="366" y="86.5" width="40" height="40"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="40" id="9mL-8V-4SC"/>
-                                                    <constraint firstAttribute="width" constant="40" id="qmk-Ok-Xa2"/>
-                                                </constraints>
-                                                <state key="normal" image="icons8-outgoing_call"/>
-                                                <connections>
-                                                    <action selector="tapCalling:" destination="fXe-9Y-xPB" eventType="touchUpInside" id="wWh-Wr-bm1"/>
-                                                </connections>
-                                            </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Muk-Ua-VFI">
-                                                <rect key="frame" x="366" y="312" width="40" height="40"/>
+                                                <rect key="frame" x="358" y="423" width="40" height="40"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="40" id="RY7-rL-2vr"/>
                                                     <constraint firstAttribute="height" constant="40" id="SMv-Wd-ZoH"/>
@@ -838,101 +858,66 @@ func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMe
                                                     <action selector="tapSelectMap:" destination="fXe-9Y-xPB" eventType="touchUpInside" id="Ej5-zg-fcp"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A6S-tJ-xIk">
-                                                <rect key="frame" x="366" y="127.5" width="40" height="40"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="40" id="19g-wL-Jv0"/>
-                                                    <constraint firstAttribute="width" constant="40" id="H4c-CS-keF"/>
-                                                </constraints>
-                                                <state key="normal" image="icons8-edit_filled"/>
-                                                <connections>
-                                                    <action selector="tapEditTienDiMung:" destination="fXe-9Y-xPB" eventType="touchUpInside" id="fCx-od-YcI"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JyG-fV-pgY">
-                                                <rect key="frame" x="366" y="168.5" width="40" height="40"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="40" id="OnI-Xs-1Fn"/>
-                                                    <constraint firstAttribute="height" constant="40" id="hTS-ho-QAZ"/>
-                                                </constraints>
-                                                <state key="normal" image="icons8-edit_filled"/>
-                                                <connections>
-                                                    <action selector="tapEditTienNhan:" destination="fXe-9Y-xPB" eventType="touchUpInside" id="Twb-tn-g8v"/>
-                                                </connections>
-                                            </button>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" verticalHuggingPriority="251" scrollEnabled="NO" text="Ghi chú" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Ayh-2I-9AM">
+                                                <rect key="frame" x="16" y="540" width="59.5" height="33"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <color key="textColor" systemColor="labelColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstItem="bDj-Rg-mQS" firstAttribute="trailing" secondItem="gai-n6-9n1" secondAttribute="trailing" id="1o0-uI-1RV"/>
-                                            <constraint firstItem="iC5-O8-Jx2" firstAttribute="leading" secondItem="inz-OJ-LhF" secondAttribute="leading" constant="8" id="3ts-SN-Fzm"/>
-                                            <constraint firstItem="hZo-Fh-fhj" firstAttribute="top" secondItem="hhG-JA-qSV" secondAttribute="top" id="4iL-6t-w6I"/>
-                                            <constraint firstItem="bBr-XX-O24" firstAttribute="leading" secondItem="inz-OJ-LhF" secondAttribute="leading" constant="8" id="5oq-4O-EaD"/>
-                                            <constraint firstItem="9Uu-sf-BsS" firstAttribute="centerY" secondItem="Xww-nQ-BxP" secondAttribute="centerY" id="5zX-P8-X0n"/>
-                                            <constraint firstItem="EbQ-d1-gn1" firstAttribute="leading" secondItem="bBr-XX-O24" secondAttribute="trailing" id="6Cm-Ht-9zq"/>
-                                            <constraint firstItem="sH4-JA-Ldb" firstAttribute="leading" secondItem="inz-OJ-LhF" secondAttribute="leading" constant="8" id="6va-CS-jio"/>
-                                            <constraint firstAttribute="trailing" secondItem="I26-pQ-vBQ" secondAttribute="trailing" constant="8" id="75d-tA-ydg"/>
-                                            <constraint firstItem="FnO-7E-b4x" firstAttribute="leading" secondItem="EbQ-d1-gn1" secondAttribute="trailing" id="7O2-xf-PL9"/>
-                                            <constraint firstItem="JRi-Pd-5Bb" firstAttribute="top" secondItem="GYP-vS-V8R" secondAttribute="top" id="7Yh-wD-NW4"/>
-                                            <constraint firstAttribute="bottom" secondItem="sH4-JA-Ldb" secondAttribute="bottom" constant="200" id="AjE-bb-im5"/>
-                                            <constraint firstItem="chy-fk-rrO" firstAttribute="leading" secondItem="inz-OJ-LhF" secondAttribute="leading" constant="8" id="BFC-O4-fvS"/>
-                                            <constraint firstItem="bDj-Rg-mQS" firstAttribute="centerY" secondItem="adJ-qO-KDl" secondAttribute="centerY" id="Brl-wB-eIZ"/>
-                                            <constraint firstItem="sH4-JA-Ldb" firstAttribute="top" secondItem="Ayh-2I-9AM" secondAttribute="bottom" constant="8" id="DBf-iy-h5n"/>
-                                            <constraint firstItem="EbQ-d1-gn1" firstAttribute="leading" secondItem="chy-fk-rrO" secondAttribute="trailing" id="DKe-Wb-DZV"/>
-                                            <constraint firstItem="9tN-GK-J8H" firstAttribute="top" secondItem="EYw-64-jNl" secondAttribute="top" id="EDL-44-QsF"/>
-                                            <constraint firstAttribute="trailing" secondItem="sH4-JA-Ldb" secondAttribute="trailing" constant="8" id="EEz-8c-XpR"/>
-                                            <constraint firstItem="Xww-nQ-BxP" firstAttribute="leading" secondItem="inz-OJ-LhF" secondAttribute="leading" constant="8" id="JcY-f9-pwf"/>
-                                            <constraint firstAttribute="trailing" secondItem="Wy0-A8-m6D" secondAttribute="trailing" constant="48" id="Lcg-lX-oTZ"/>
-                                            <constraint firstItem="Wy0-A8-m6D" firstAttribute="top" secondItem="inz-OJ-LhF" secondAttribute="top" constant="8" id="MQY-S7-kx3"/>
-                                            <constraint firstItem="A6S-tJ-xIk" firstAttribute="centerY" secondItem="9tN-GK-J8H" secondAttribute="centerY" id="Mc1-ZA-ogZ"/>
-                                            <constraint firstItem="Ayh-2I-9AM" firstAttribute="leading" secondItem="inz-OJ-LhF" secondAttribute="leading" constant="8" id="Mqx-xg-TBn"/>
-                                            <constraint firstAttribute="trailing" secondItem="FnO-7E-b4x" secondAttribute="trailing" constant="48" id="OHH-vg-bl8"/>
-                                            <constraint firstAttribute="trailing" secondItem="Muk-Ua-VFI" secondAttribute="trailing" constant="8" id="RiT-BW-0OV"/>
-                                            <constraint firstItem="EbQ-d1-gn1" firstAttribute="leading" secondItem="JRi-Pd-5Bb" secondAttribute="trailing" id="S4f-6S-4dH"/>
-                                            <constraint firstItem="EbQ-d1-gn1" firstAttribute="height" secondItem="inz-OJ-LhF" secondAttribute="height" multiplier="2" id="TQR-8j-eaf"/>
-                                            <constraint firstItem="adJ-qO-KDl" firstAttribute="leading" secondItem="inz-OJ-LhF" secondAttribute="leading" constant="8" id="UJJ-g6-FFU"/>
-                                            <constraint firstItem="Tjs-0f-vMC" firstAttribute="top" secondItem="eHy-jI-iPw" secondAttribute="top" id="UxX-Rx-uM6"/>
-                                            <constraint firstItem="9Uu-sf-BsS" firstAttribute="top" secondItem="FnO-7E-b4x" secondAttribute="bottom" constant="8" id="Xew-Of-LDk"/>
-                                            <constraint firstItem="JyG-fV-pgY" firstAttribute="centerY" secondItem="GYP-vS-V8R" secondAttribute="centerY" id="Xym-HE-oYE"/>
-                                            <constraint firstItem="adJ-qO-KDl" firstAttribute="top" secondItem="gai-n6-9n1" secondAttribute="top" id="aGm-eR-hSl"/>
-                                            <constraint firstItem="hZo-Fh-fhj" firstAttribute="leading" secondItem="inz-OJ-LhF" secondAttribute="leading" constant="8" id="aVj-5x-Vth"/>
-                                            <constraint firstAttribute="trailing" secondItem="JyG-fV-pgY" secondAttribute="trailing" constant="8" id="aef-Dh-XaN"/>
-                                            <constraint firstItem="Muk-Ua-VFI" firstAttribute="centerY" secondItem="FnO-7E-b4x" secondAttribute="centerY" id="bfm-Mz-Z0R"/>
-                                            <constraint firstItem="iC5-O8-Jx2" firstAttribute="top" secondItem="Q7b-3F-ge0" secondAttribute="top" id="dqn-45-q4N"/>
-                                            <constraint firstItem="EbQ-d1-gn1" firstAttribute="leading" secondItem="Ayh-2I-9AM" secondAttribute="trailing" id="eRW-k7-JVh"/>
-                                            <constraint firstItem="I26-pQ-vBQ" firstAttribute="centerY" secondItem="adJ-qO-KDl" secondAttribute="centerY" id="g9S-FI-Ubz"/>
-                                            <constraint firstItem="EbQ-d1-gn1" firstAttribute="leading" secondItem="Xww-nQ-BxP" secondAttribute="trailing" id="gK2-OC-GqA"/>
-                                            <constraint firstItem="Wy0-A8-m6D" firstAttribute="leading" secondItem="EbQ-d1-gn1" secondAttribute="trailing" id="hIC-pX-GkX"/>
-                                            <constraint firstItem="eHy-jI-iPw" firstAttribute="leading" secondItem="inz-OJ-LhF" secondAttribute="leading" constant="8" id="iDH-0q-EGs"/>
-                                            <constraint firstItem="aKY-uU-eCk" firstAttribute="leading" secondItem="inz-OJ-LhF" secondAttribute="leading" constant="8" id="ixX-7N-KeY"/>
-                                            <constraint firstItem="9Uu-sf-BsS" firstAttribute="leading" secondItem="EbQ-d1-gn1" secondAttribute="trailing" id="jVm-WU-ZGt"/>
-                                            <constraint firstItem="EbQ-d1-gn1" firstAttribute="leading" secondItem="eHy-jI-iPw" secondAttribute="trailing" id="jg3-9R-L6R"/>
-                                            <constraint firstItem="EbQ-d1-gn1" firstAttribute="leading" secondItem="adJ-qO-KDl" secondAttribute="trailing" id="lWu-HG-nOK"/>
-                                            <constraint firstItem="aKY-uU-eCk" firstAttribute="top" secondItem="ms2-yw-SON" secondAttribute="top" id="mel-GY-b9s"/>
-                                            <constraint firstItem="EbQ-d1-gn1" firstAttribute="top" secondItem="inz-OJ-LhF" secondAttribute="top" id="nmR-MP-g0R"/>
-                                            <constraint firstItem="FnO-7E-b4x" firstAttribute="top" secondItem="Wy0-A8-m6D" secondAttribute="bottom" constant="8" id="qjW-r6-Wuo"/>
-                                            <constraint firstItem="EbQ-d1-gn1" firstAttribute="leading" secondItem="hZo-Fh-fhj" secondAttribute="trailing" id="qv0-pt-hdW"/>
-                                            <constraint firstItem="chy-fk-rrO" firstAttribute="top" secondItem="A71-Js-ZfR" secondAttribute="top" id="r7P-T8-UX7"/>
-                                            <constraint firstAttribute="trailing" secondItem="A6S-tJ-xIk" secondAttribute="trailing" constant="8" id="riX-0m-oIZ"/>
-                                            <constraint firstItem="EbQ-d1-gn1" firstAttribute="centerX" secondItem="inz-OJ-LhF" secondAttribute="centerX" multiplier="0.75" id="rv4-0o-aij"/>
-                                            <constraint firstItem="AeK-UM-DNq" firstAttribute="top" secondItem="bBr-XX-O24" secondAttribute="top" id="sKI-Ld-H8v"/>
-                                            <constraint firstItem="EbQ-d1-gn1" firstAttribute="leading" secondItem="iC5-O8-Jx2" secondAttribute="trailing" id="tVX-k4-5BZ"/>
-                                            <constraint firstItem="9tN-GK-J8H" firstAttribute="leading" secondItem="inz-OJ-LhF" secondAttribute="leading" constant="8" id="uWT-6h-0h7"/>
-                                            <constraint firstItem="Ayh-2I-9AM" firstAttribute="top" secondItem="Xww-nQ-BxP" secondAttribute="bottom" constant="8" id="vyg-IO-qIT"/>
-                                            <constraint firstItem="EbQ-d1-gn1" firstAttribute="leading" secondItem="9tN-GK-J8H" secondAttribute="trailing" id="wwa-5b-5nx"/>
-                                            <constraint firstItem="EbQ-d1-gn1" firstAttribute="leading" secondItem="aKY-uU-eCk" secondAttribute="trailing" id="xgm-Xa-lOT"/>
-                                            <constraint firstItem="JRi-Pd-5Bb" firstAttribute="leading" secondItem="inz-OJ-LhF" secondAttribute="leading" constant="8" id="yFR-gL-RDF"/>
+                                            <constraint firstItem="FnO-7E-b4x" firstAttribute="leading" secondItem="Wy0-A8-m6D" secondAttribute="leading" id="0h8-Sc-jk0"/>
+                                            <constraint firstItem="9Uu-sf-BsS" firstAttribute="centerY" secondItem="Xww-nQ-BxP" secondAttribute="centerY" id="2Wb-vC-S7a"/>
+                                            <constraint firstAttribute="trailing" secondItem="Muk-Ua-VFI" secondAttribute="trailing" constant="16" id="5ZX-mW-1E2"/>
+                                            <constraint firstItem="iC5-O8-Jx2" firstAttribute="leading" secondItem="inz-OJ-LhF" secondAttribute="leading" constant="16" id="5jo-Vj-YlR"/>
+                                            <constraint firstItem="adJ-qO-KDl" firstAttribute="leading" secondItem="inz-OJ-LhF" secondAttribute="leading" constant="16" id="6Nq-2Z-Ltp"/>
+                                            <constraint firstItem="sH4-JA-Ldb" firstAttribute="leading" secondItem="inz-OJ-LhF" secondAttribute="leading" constant="16" id="7Aw-7X-IDN"/>
+                                            <constraint firstItem="Xww-nQ-BxP" firstAttribute="leading" secondItem="inz-OJ-LhF" secondAttribute="leading" constant="16" id="F8r-wg-XPr"/>
+                                            <constraint firstItem="Muk-Ua-VFI" firstAttribute="leading" secondItem="FnO-7E-b4x" secondAttribute="trailing" constant="8" id="Mgu-gk-Rel"/>
+                                            <constraint firstItem="Wy0-A8-m6D" firstAttribute="width" secondItem="inz-OJ-LhF" secondAttribute="width" multiplier="0.6" id="NtX-xn-YN0"/>
+                                            <constraint firstItem="Wy0-A8-m6D" firstAttribute="top" secondItem="inz-OJ-LhF" secondAttribute="top" constant="8" id="NyM-ph-6Av"/>
+                                            <constraint firstItem="FnO-7E-b4x" firstAttribute="centerY" secondItem="Muk-Ua-VFI" secondAttribute="centerY" id="OhN-et-9mT"/>
+                                            <constraint firstItem="hZo-Fh-fhj" firstAttribute="leading" secondItem="inz-OJ-LhF" secondAttribute="leading" constant="16" id="Qf9-Bc-vE0"/>
+                                            <constraint firstItem="JRi-Pd-5Bb" firstAttribute="leading" secondItem="inz-OJ-LhF" secondAttribute="leading" constant="16" id="S4y-QW-W6e"/>
+                                            <constraint firstAttribute="trailing" secondItem="9Uu-sf-BsS" secondAttribute="trailing" constant="16" id="SAT-T1-EBv"/>
+                                            <constraint firstItem="bBr-XX-O24" firstAttribute="leading" secondItem="inz-OJ-LhF" secondAttribute="leading" constant="16" id="UKp-hk-K2Y"/>
+                                            <constraint firstAttribute="trailing" secondItem="Wy0-A8-m6D" secondAttribute="trailing" constant="16" id="WjB-dG-UEm"/>
+                                            <constraint firstAttribute="trailing" secondItem="sH4-JA-Ldb" secondAttribute="trailing" constant="16" id="ZZN-iU-DXi"/>
+                                            <constraint firstItem="sH4-JA-Ldb" firstAttribute="top" secondItem="Ayh-2I-9AM" secondAttribute="bottom" constant="8" id="ZeR-BU-qMb"/>
+                                            <constraint firstItem="eHy-jI-iPw" firstAttribute="leading" secondItem="inz-OJ-LhF" secondAttribute="leading" constant="16" id="aoA-rV-mAi"/>
+                                            <constraint firstAttribute="bottom" secondItem="sH4-JA-Ldb" secondAttribute="bottom" constant="32" id="cyL-Wk-PcE"/>
+                                            <constraint firstItem="Yxv-nt-1In" firstAttribute="top" secondItem="adJ-qO-KDl" secondAttribute="top" id="eRi-hf-Oyj"/>
+                                            <constraint firstItem="9Uu-sf-BsS" firstAttribute="top" secondItem="FnO-7E-b4x" secondAttribute="bottom" constant="16" id="eg8-pv-T0v"/>
+                                            <constraint firstItem="Vl0-We-9cT" firstAttribute="top" secondItem="9tN-GK-J8H" secondAttribute="top" id="evk-Av-o6u"/>
+                                            <constraint firstItem="hhG-JA-qSV" firstAttribute="top" secondItem="hZo-Fh-fhj" secondAttribute="top" id="fwg-ug-6YX"/>
+                                            <constraint firstItem="9tN-GK-J8H" firstAttribute="leading" secondItem="inz-OJ-LhF" secondAttribute="leading" constant="16" id="gEn-Jf-m4d"/>
+                                            <constraint firstItem="AeK-UM-DNq" firstAttribute="top" secondItem="bBr-XX-O24" secondAttribute="top" id="gXV-ix-YS7"/>
+                                            <constraint firstItem="DFb-bf-YKZ" firstAttribute="top" secondItem="JRi-Pd-5Bb" secondAttribute="top" id="hLy-pv-nw6"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" priority="750" constant="600" id="hv4-45-rVz"/>
+                                            <constraint firstItem="Q7b-3F-ge0" firstAttribute="top" secondItem="iC5-O8-Jx2" secondAttribute="top" id="kUU-b0-ga0"/>
+                                            <constraint firstItem="A71-Js-ZfR" firstAttribute="top" secondItem="chy-fk-rrO" secondAttribute="top" id="kdV-no-jqx"/>
+                                            <constraint firstItem="ms2-yw-SON" firstAttribute="top" secondItem="aKY-uU-eCk" secondAttribute="top" id="kgn-yo-eD5"/>
+                                            <constraint firstItem="aKY-uU-eCk" firstAttribute="leading" secondItem="inz-OJ-LhF" secondAttribute="leading" constant="16" id="lsk-r1-B5l"/>
+                                            <constraint firstItem="Tjs-0f-vMC" firstAttribute="top" secondItem="eHy-jI-iPw" secondAttribute="top" id="o0N-iM-WQu"/>
+                                            <constraint firstItem="FnO-7E-b4x" firstAttribute="top" secondItem="Wy0-A8-m6D" secondAttribute="bottom" constant="16" id="rVQ-ra-4Yv"/>
+                                            <constraint firstItem="Ayh-2I-9AM" firstAttribute="top" secondItem="Xww-nQ-BxP" secondAttribute="bottom" constant="8" id="rqO-yk-mKv"/>
+                                            <constraint firstItem="Ayh-2I-9AM" firstAttribute="leading" secondItem="inz-OJ-LhF" secondAttribute="leading" constant="16" id="unF-3H-PXX"/>
+                                            <constraint firstItem="chy-fk-rrO" firstAttribute="leading" secondItem="inz-OJ-LhF" secondAttribute="leading" constant="16" id="wWp-li-wKY"/>
+                                            <constraint firstItem="Wy0-A8-m6D" firstAttribute="leading" secondItem="adJ-qO-KDl" secondAttribute="trailing" constant="32" id="zDI-EW-BoU"/>
                                         </constraints>
                                     </view>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="inz-OJ-LhF" firstAttribute="top" secondItem="lmy-NV-xTZ" secondAttribute="top" id="U8L-SD-Ugo"/>
-                                    <constraint firstAttribute="trailing" secondItem="inz-OJ-LhF" secondAttribute="trailing" id="W4w-mb-PfB"/>
-                                    <constraint firstItem="inz-OJ-LhF" firstAttribute="leading" secondItem="lmy-NV-xTZ" secondAttribute="leading" id="hcm-rT-k5P"/>
-                                    <constraint firstAttribute="bottom" secondItem="inz-OJ-LhF" secondAttribute="bottom" id="y5o-Ia-WOU"/>
+                                    <constraint firstItem="inz-OJ-LhF" firstAttribute="leading" secondItem="lmy-NV-xTZ" secondAttribute="leading" id="Mcx-TP-zTK"/>
+                                    <constraint firstAttribute="bottom" secondItem="inz-OJ-LhF" secondAttribute="bottom" id="Yid-gj-CCs"/>
+                                    <constraint firstItem="inz-OJ-LhF" firstAttribute="top" secondItem="lmy-NV-xTZ" secondAttribute="top" id="cMh-BA-KAM"/>
+                                    <constraint firstAttribute="trailing" secondItem="inz-OJ-LhF" secondAttribute="trailing" id="m3z-ii-eL8"/>
                                 </constraints>
                             </scrollView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="AQL-nW-97N">
-                                <rect key="frame" x="8" y="848" width="398" height="40"/>
+                                <rect key="frame" x="8" y="822" width="398" height="40"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VEB-nF-wIo">
                                         <rect key="frame" x="0.0" y="0.0" width="195" height="40"/>
@@ -958,12 +943,11 @@ func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMe
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="AQL-nW-97N" firstAttribute="leading" secondItem="5Wp-uB-Iao" secondAttribute="leading" constant="8" id="6tG-Oz-utb"/>
+                            <constraint firstItem="inz-OJ-LhF" firstAttribute="width" secondItem="Fgk-kb-qSp" secondAttribute="width" id="A2m-Hh-qtn"/>
                             <constraint firstItem="AQL-nW-97N" firstAttribute="top" secondItem="lmy-NV-xTZ" secondAttribute="bottom" constant="8" id="Bsg-fc-DQY"/>
-                            <constraint firstItem="inz-OJ-LhF" firstAttribute="height" secondItem="Fgk-kb-qSp" secondAttribute="height" multiplier="2" id="JRG-rv-FC9"/>
                             <constraint firstItem="lmy-NV-xTZ" firstAttribute="trailing" secondItem="5Wp-uB-Iao" secondAttribute="trailing" id="JsH-n5-ROi"/>
-                            <constraint firstItem="inz-OJ-LhF" firstAttribute="width" secondItem="Fgk-kb-qSp" secondAttribute="width" id="NZD-4H-Cce"/>
-                            <constraint firstItem="lmy-NV-xTZ" firstAttribute="top" secondItem="Fgk-kb-qSp" secondAttribute="top" id="UdI-TE-yDC"/>
-                            <constraint firstAttribute="bottom" secondItem="AQL-nW-97N" secondAttribute="bottom" constant="8" id="X7I-zF-mBf"/>
+                            <constraint firstItem="lmy-NV-xTZ" firstAttribute="top" secondItem="5Wp-uB-Iao" secondAttribute="top" id="UdI-TE-yDC"/>
+                            <constraint firstItem="5Wp-uB-Iao" firstAttribute="bottom" secondItem="AQL-nW-97N" secondAttribute="bottom" id="X7I-zF-mBf"/>
                             <constraint firstItem="lmy-NV-xTZ" firstAttribute="leading" secondItem="5Wp-uB-Iao" secondAttribute="leading" id="hsK-EA-nHR"/>
                             <constraint firstItem="5Wp-uB-Iao" firstAttribute="trailing" secondItem="AQL-nW-97N" secondAttribute="trailing" constant="8" id="n9M-xD-U1c"/>
                         </constraints>
@@ -1199,27 +1183,27 @@ func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMe
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dJi-Al-19k">
-                                <rect key="frame" x="10.5" y="382" width="393" height="132"/>
+                                <rect key="frame" x="10.5" y="377.5" width="393" height="141"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5bd-5M-Ey8">
-                                        <rect key="frame" x="143.5" y="0.0" width="8" height="132"/>
+                                        <rect key="frame" x="143.5" y="0.0" width="8" height="141"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="8" id="12l-ou-Eto"/>
                                         </constraints>
                                     </view>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Tiền đi mừng" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="M5Z-d5-Ays">
-                                        <rect key="frame" x="8" y="8" width="135.5" height="18.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Tiền đi mừng" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="M5Z-d5-Ays">
+                                        <rect key="frame" x="8" y="8" width="135.5" height="24.5"/>
+                                        <fontDescription key="fontDescription" name="PlayfairDisplay-Bold" family="Playfair Display" pointSize="17"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="HZD-6X-pEo">
-                                        <rect key="frame" x="56" y="42.5" width="281" height="26.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <rect key="frame" x="56" y="48.5" width="281" height="32.5"/>
+                                        <fontDescription key="fontDescription" name="PlayfairDisplay-Regular" family="Playfair Display" pointSize="17"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VAe-wG-tbP">
-                                        <rect key="frame" x="345" y="36" width="40" height="40"/>
+                                        <rect key="frame" x="345" y="45" width="40" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="40" id="PzI-l8-Qhi"/>
                                             <constraint firstAttribute="height" constant="40" id="Vcx-fN-vtx"/>
@@ -1230,7 +1214,7 @@ func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMe
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Cv-aR-MoO">
-                                        <rect key="frame" x="8" y="36" width="40" height="40"/>
+                                        <rect key="frame" x="8" y="45" width="40" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="0r0-Bm-sIA"/>
                                             <constraint firstAttribute="width" constant="40" id="4mH-da-Ph4"/>
@@ -1240,13 +1224,13 @@ func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMe
                                             <action selector="tapMinus:" destination="K4W-Tr-hVZ" eventType="touchUpInside" id="rpK-K2-YA8"/>
                                         </connections>
                                     </button>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZqQ-Qk-von">
-                                        <rect key="frame" x="151.5" y="8" width="233.5" height="18.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZqQ-Qk-von">
+                                        <rect key="frame" x="151.5" y="8" width="233.5" height="24.5"/>
+                                        <fontDescription key="fontDescription" name="PlayfairDisplay-Bold" family="Playfair Display" pointSize="17"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7R6-oi-GsM">
-                                        <rect key="frame" x="0.0" y="92" width="393" height="40"/>
+                                        <rect key="frame" x="0.0" y="101" width="393" height="40"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="j1C-TB-AJp">
                                                 <rect key="frame" x="0.0" y="0.5" width="393" height="39.5"/>
@@ -1254,6 +1238,7 @@ func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMe
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uV3-xX-mbQ">
                                                         <rect key="frame" x="0.0" y="0.0" width="196.5" height="39.5"/>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <fontDescription key="fontDescription" name="PlayfairDisplay-Regular" family="Playfair Display" pointSize="17"/>
                                                         <state key="normal" title="Hủy"/>
                                                         <connections>
                                                             <action selector="tapCancel:" destination="K4W-Tr-hVZ" eventType="touchUpInside" id="O0U-sU-PnE"/>
@@ -1262,6 +1247,7 @@ func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMe
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AuP-9a-3dr">
                                                         <rect key="frame" x="197" y="0.0" width="196" height="39.5"/>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <fontDescription key="fontDescription" name="PlayfairDisplay-Regular" family="Playfair Display" pointSize="17"/>
                                                         <state key="normal" title="Xong"/>
                                                         <connections>
                                                             <action selector="tapDone:" destination="K4W-Tr-hVZ" eventType="touchUpInside" id="A9J-2d-eMe"/>
@@ -1477,6 +1463,7 @@ func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMe
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VoY-zF-wBu">
                                         <rect key="frame" x="0.0" y="0.0" width="195" height="40"/>
                                         <color key="backgroundColor" red="0.3485559225" green="0.62407565119999997" blue="0.82380425930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="PlayfairDisplay-Regular" family="Playfair Display" pointSize="17"/>
                                         <state key="normal" title="Hủy">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
@@ -1487,6 +1474,7 @@ func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMe
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X57-IX-fs2">
                                         <rect key="frame" x="203" y="0.0" width="195" height="40"/>
                                         <color key="backgroundColor" red="0.3485559225" green="0.62407565119999997" blue="0.82380425930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="PlayfairDisplay-Regular" family="Playfair Display" pointSize="17"/>
                                         <state key="normal" title="Thêm">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
@@ -1765,7 +1753,7 @@ func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMe
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="7oC-Wl-Zmi">
-                                <rect key="frame" x="8" y="96" width="398" height="41"/>
+                                <rect key="frame" x="16" y="96" width="382" height="41"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="DqX-nV-b6V"/>
                                 </constraints>
@@ -1779,7 +1767,7 @@ func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMe
                                 </connections>
                             </segmentedControl>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CR0-xp-eCx">
-                                <rect key="frame" x="0.0" y="144" width="414" height="40"/>
+                                <rect key="frame" x="16" y="144" width="382" height="40"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="magnifyingglass" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Pu5-ty-hkW">
                                         <rect key="frame" x="8" y="10.5" width="20" height="18.5"/>
@@ -1789,7 +1777,7 @@ func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMe
                                         </constraints>
                                     </imageView>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Tìm kiếm" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="0Op-2u-YJE">
-                                        <rect key="frame" x="36" y="4" width="370" height="32"/>
+                                        <rect key="frame" x="36" y="4" width="338" height="32"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
@@ -1812,32 +1800,32 @@ func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMe
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="40"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icons8-unchecked_checkbox" translatesAutoresizingMaskIntoConstraints="NO" id="SM5-e5-zqG">
-                                                <rect key="frame" x="8" y="10" width="20" height="20"/>
+                                                <rect key="frame" x="16" y="10" width="20" height="20"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="20" id="skE-SM-rAG"/>
                                                     <constraint firstAttribute="height" constant="20" id="u9O-lm-OSk"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chọn tất cả" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Yk-1Y-s9j">
-                                                <rect key="frame" x="36" y="10" width="88" height="20.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <rect key="frame" x="44" y="8.5" width="86.5" height="23"/>
+                                                <fontDescription key="fontDescription" name="PlayfairDisplay-Regular" family="Playfair Display" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tvC-PS-L5Y">
-                                                <rect key="frame" x="8" y="0.0" width="116" height="40"/>
+                                                <rect key="frame" x="16" y="0.0" width="114.5" height="40"/>
                                                 <connections>
                                                     <action selector="tapSelectAll:" destination="JmG-Cb-mnw" eventType="touchUpInside" id="FBs-a5-D2L"/>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Đã chọn:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jPu-ej-BuU">
-                                                <rect key="frame" x="132" y="10" width="68.5" height="20.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <rect key="frame" x="138.5" y="8.5" width="163.5" height="23"/>
+                                                <fontDescription key="fontDescription" name="PlayfairDisplay-Regular" family="Playfair Display" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Pdn-G4-w3N">
-                                                <rect key="frame" x="326" y="0.0" width="88" height="40"/>
+                                                <rect key="frame" x="310" y="0.0" width="88" height="40"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pGS-1d-biE">
                                                         <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
@@ -1869,14 +1857,15 @@ func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMe
                                             <constraint firstItem="tvC-PS-L5Y" firstAttribute="leading" secondItem="SM5-e5-zqG" secondAttribute="leading" id="FrG-eh-bik"/>
                                             <constraint firstItem="tvC-PS-L5Y" firstAttribute="top" secondItem="tf6-L1-5Fu" secondAttribute="top" id="IDY-L8-ZgE"/>
                                             <constraint firstItem="9Yk-1Y-s9j" firstAttribute="leading" secondItem="SM5-e5-zqG" secondAttribute="trailing" constant="8" id="J35-qR-R4J"/>
-                                            <constraint firstAttribute="trailing" secondItem="Pdn-G4-w3N" secondAttribute="trailing" id="Lpo-4k-ia7"/>
+                                            <constraint firstAttribute="trailing" secondItem="Pdn-G4-w3N" secondAttribute="trailing" constant="16" id="Lpo-4k-ia7"/>
+                                            <constraint firstItem="Pdn-G4-w3N" firstAttribute="leading" secondItem="jPu-ej-BuU" secondAttribute="trailing" constant="8" id="Rhj-F1-4oG"/>
                                             <constraint firstItem="9Yk-1Y-s9j" firstAttribute="trailing" secondItem="tvC-PS-L5Y" secondAttribute="trailing" id="XF2-2D-BPz"/>
                                             <constraint firstAttribute="bottom" secondItem="tvC-PS-L5Y" secondAttribute="bottom" id="aHd-hh-Afh"/>
                                             <constraint firstAttribute="bottom" secondItem="Pdn-G4-w3N" secondAttribute="bottom" id="cp6-bQ-3n6"/>
                                             <constraint firstItem="9Yk-1Y-s9j" firstAttribute="centerY" secondItem="tf6-L1-5Fu" secondAttribute="centerY" id="lJm-ry-Maa"/>
                                             <constraint firstItem="Pdn-G4-w3N" firstAttribute="top" secondItem="tf6-L1-5Fu" secondAttribute="top" id="orI-Rm-1fu"/>
                                             <constraint firstAttribute="height" constant="40" id="pUK-vR-LSF"/>
-                                            <constraint firstItem="SM5-e5-zqG" firstAttribute="leading" secondItem="tf6-L1-5Fu" secondAttribute="leading" constant="8" id="wX9-Rf-VAH"/>
+                                            <constraint firstItem="SM5-e5-zqG" firstAttribute="leading" secondItem="tf6-L1-5Fu" secondAttribute="leading" constant="16" id="wX9-Rf-VAH"/>
                                         </constraints>
                                     </view>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="uNh-pb-397">
@@ -1913,9 +1902,9 @@ func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMe
                         <viewLayoutGuide key="safeArea" id="GF3-Bu-LOY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="CR0-xp-eCx" firstAttribute="leading" secondItem="pBg-9G-DWa" secondAttribute="leading" id="1oj-qM-feP"/>
+                            <constraint firstItem="CR0-xp-eCx" firstAttribute="leading" secondItem="pBg-9G-DWa" secondAttribute="leading" constant="16" id="1oj-qM-feP"/>
                             <constraint firstItem="Bf4-Rc-jxE" firstAttribute="leading" secondItem="pBg-9G-DWa" secondAttribute="leading" id="2T7-i1-btf"/>
-                            <constraint firstItem="7oC-Wl-Zmi" firstAttribute="leading" secondItem="GF3-Bu-LOY" secondAttribute="leading" constant="8" id="3Ld-u3-vPw"/>
+                            <constraint firstItem="7oC-Wl-Zmi" firstAttribute="leading" secondItem="pBg-9G-DWa" secondAttribute="leading" constant="16" id="3Ld-u3-vPw"/>
                             <constraint firstAttribute="bottom" secondItem="d2A-O5-qni" secondAttribute="bottom" id="DAN-Kc-Co4"/>
                             <constraint firstAttribute="trailing" secondItem="TLG-hD-xf6" secondAttribute="trailing" id="JKW-PQ-DeJ"/>
                             <constraint firstItem="d2A-O5-qni" firstAttribute="trailing" secondItem="GF3-Bu-LOY" secondAttribute="trailing" id="LdO-sB-XPz"/>
@@ -1927,8 +1916,8 @@ func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMe
                             <constraint firstItem="GF3-Bu-LOY" firstAttribute="bottom" secondItem="Bf4-Rc-jxE" secondAttribute="bottom" id="loD-zV-xyc"/>
                             <constraint firstItem="TLG-hD-xf6" firstAttribute="top" secondItem="pBg-9G-DWa" secondAttribute="top" id="m9L-U9-3DV"/>
                             <constraint firstItem="CR0-xp-eCx" firstAttribute="top" secondItem="7oC-Wl-Zmi" secondAttribute="bottom" constant="8" id="nME-oj-45D"/>
-                            <constraint firstItem="GF3-Bu-LOY" firstAttribute="trailing" secondItem="7oC-Wl-Zmi" secondAttribute="trailing" constant="8" id="qzF-xw-QXV"/>
-                            <constraint firstAttribute="trailing" secondItem="CR0-xp-eCx" secondAttribute="trailing" id="suN-3w-Ifw"/>
+                            <constraint firstAttribute="trailing" secondItem="7oC-Wl-Zmi" secondAttribute="trailing" constant="16" id="qzF-xw-QXV"/>
+                            <constraint firstAttribute="trailing" secondItem="CR0-xp-eCx" secondAttribute="trailing" constant="16" id="suN-3w-Ifw"/>
                             <constraint firstItem="GF3-Bu-LOY" firstAttribute="trailing" secondItem="Pu5-pY-eSv" secondAttribute="trailing" constant="8" id="vfz-bf-TfA"/>
                             <constraint firstItem="d2A-O5-qni" firstAttribute="top" secondItem="CR0-xp-eCx" secondAttribute="bottom" constant="8" id="vkN-pk-gTC"/>
                             <constraint firstItem="d2A-O5-qni" firstAttribute="leading" secondItem="GF3-Bu-LOY" secondAttribute="leading" id="z4a-sy-8fY"/>
