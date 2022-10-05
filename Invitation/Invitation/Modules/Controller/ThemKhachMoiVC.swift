@@ -407,7 +407,7 @@ class ThemKhachMoiVC: BaseViewController, UITextViewDelegate {
         newUser.name = tenKhachMoiTextView.text
         newUser.age = tuoiTextView.text
         newUser.address = diaChiTextView.text
-        newUser.quan_he = chiTietQuanHeTextView.text
+        newUser.relation = chiTietQuanHeTextView.text
         if let phone = phoneTextView.text {
             newUser.phone = phone
         }

@@ -331,7 +331,7 @@ extension HistoryVC: UITableViewDataSource, UITableViewDelegate {
                         offer.name = user.name
                         offer.age = user.age
                         offer.address = user.address
-                        offer.quan_he = user.quan_he
+                        offer.relation = user.relation
                         
                         offer.phone = user.phone
                         offer.status = user.status

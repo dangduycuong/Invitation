@@ -43,7 +43,7 @@ class DeleteDataCell: BaseTableViewCell {
     }
     
     func fillData() {
-        relationTextView.text = infoKM.quan_he
+        relationTextView.text = infoKM.relation
         nameTextView.text = infoKM.name
         ageTextView.text = infoKM.age
         addressTextView.text = infoKM.address

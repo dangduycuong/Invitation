@@ -15,7 +15,7 @@ class ThongTinKhachMoiModel: Object {
     @objc dynamic var age: String?
     @objc dynamic var address: String?
     @objc dynamic var phone: String?
-    @objc dynamic var quan_he: String?
+    @objc dynamic var relation: String?
     @objc dynamic var status: Bool = false
 
     @objc dynamic var latitude: Double = 0.0

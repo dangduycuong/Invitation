@@ -38,16 +38,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     }
     
     private func configRealmDB() {
-//        let mySchemaVersion = 3
-//        let config = Realm.Configuration(schemaVersion: UInt64(mySchemaVersion), migrationBlock: { migration, oldSchemaVersion in
-//            if oldSchemaVersion < 4 {
-//                migration.enumerateObjects(ofType: ThongTinKhachMoiModel.className()) { oldObject, newObject in
-//                    // combine name fields into a single field
-//                }
-//                migration.renameProperty(onType: ThongTinKhachMoiModel.className(), from: "ten", to: "name")
-//            }
-//        })
-//        Realm.Configuration.defaultConfiguration = config
+        let mySchemaVersion = 2
+        let config = Realm.Configuration(schemaVersion: UInt64(mySchemaVersion), migrationBlock: { migration, oldSchemaVersion in
+            print("---- ", oldSchemaVersion, mySchemaVersion)
+            if oldSchemaVersion < 3 {
+                migration.enumerateObjects(ofType: ThongTinKhachMoiModel.className()) { oldObject, newObject in
+                    // combine name fields into a single field
+                }
+                migration.renameProperty(onType: ThongTinKhachMoiModel.className(), from: "quan_he", to: "relation")
+            }
+        })
+        Realm.Configuration.defaultConfiguration = config
     }
 
     // MARK: UISceneSession Lifecycle

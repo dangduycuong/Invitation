@@ -248,7 +248,7 @@ class GuestDetailsVC: BaseViewController {
     }
     
     func fillData() {
-        quanHeTextView.text = detailKhach.quan_he
+        quanHeTextView.text = detailKhach.relation
         tenTextView.text = detailKhach.name
         tuoiTextView.text = detailKhach.age
         phoneTextView.text = detailKhach.phone
@@ -273,7 +273,7 @@ class GuestDetailsVC: BaseViewController {
         newInfo.name = tenTextView.text
         newInfo.age = tuoiTextView.text
         newInfo.address = diaChiTextView.text
-        newInfo.quan_he = quanHeTextView.text
+        newInfo.relation = quanHeTextView.text
         if let longitude = longitudeTextView.text.toDouble(), let latitude = latitudeTextView.text.toDouble() {
             newInfo.longitude = longitude
             newInfo.latitude = latitude

@@ -84,7 +84,7 @@ class KhachMoiCell: BaseTableViewCell, UITextViewDelegate {
         tenTextView.text = infoKhachMoi.name
         tuoiTextView.text = infoKhachMoi.age
         diaChiTextView.text = infoKhachMoi.address
-        quanHeTextView.text = infoKhachMoi.quan_he
+        quanHeTextView.text = infoKhachMoi.relation
         
         //fff
         statusSwitch.isOn = infoKhachMoi.status

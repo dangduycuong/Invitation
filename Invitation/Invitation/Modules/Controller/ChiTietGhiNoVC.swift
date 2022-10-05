@@ -74,7 +74,7 @@ class ChiTietGhiNoVC: BaseViewController {
         updateKM.age = detailKM.age
         updateKM.address = detailKM.address
         updateKM.phone = detailKM.phone
-        updateKM.quan_he = detailKM.quan_he
+        updateKM.relation = detailKM.relation
         updateKM.status = detailKM.status
         
         updateKM.latitude = detailKM.latitude
@@ -191,7 +191,7 @@ extension ChiTietGhiNoVC: UITableViewDelegate, UITableViewDataSource {
                 showRelation(textView: data.textView)
             }
             
-            updateKM.quan_he = data.textView.text
+            updateKM.relation = data.textView.text
         case .name:
             setPlaceholder(textView: data.textView, label: nameLabel, text: "Tên khách mời")
             updateKM.name = data.textView.text
@@ -302,7 +302,7 @@ extension ChiTietGhiNoVC: UITableViewDelegate, UITableViewDataSource {
         newInfo.name = updateKM.name
         newInfo.age = updateKM.age
         newInfo.address = updateKM.address
-        newInfo.quan_he = updateKM.quan_he
+        newInfo.relation = updateKM.relation
         newInfo.longitude = updateKM.longitude
         newInfo.latitude = updateKM.latitude
         
@@ -321,7 +321,7 @@ extension ChiTietGhiNoVC: UITableViewDelegate, UITableViewDataSource {
     }
     
     func checkUpdate() -> Bool {
-        if updateKM.quan_he == "" {
+        if updateKM.relation == "" {
             showAlertViewController(type: .error, message: "Quan hệ với khách mời không được để trống", close: {
                 
             })

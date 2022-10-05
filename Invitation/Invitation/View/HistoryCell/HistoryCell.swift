@@ -63,7 +63,7 @@ class HistoryCell: BaseTableViewCell {
     }
     
     func fillData() {
-        quanHeTextView.text = infoKM.quan_he
+        quanHeTextView.text = infoKM.relation
         tenTextView.text = infoKM.name
         ageTextView.text = infoKM.age
         addressTextView.text = infoKM.address

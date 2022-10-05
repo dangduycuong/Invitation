@@ -130,7 +130,7 @@ class HomeViewController: BaseViewController, UITextFieldDelegate {
     }
     
     func getAll() {
-        let results = realm.objects(ThongTinKhachMoiModel.self).sorted(byKeyPath: "ten", ascending: true).toArray(ofType: ThongTinKhachMoiModel.self)
+        let results = realm.objects(ThongTinKhachMoiModel.self).sorted(byKeyPath: "name", ascending: true).toArray(ofType: ThongTinKhachMoiModel.self)
         print(results.count)
         totalKhach = results
         
@@ -422,7 +422,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
                         offer.name = user.name
                         offer.age = user.age
                         offer.address = user.address
-                        offer.quan_he = user.quan_he
+                        offer.relation = user.relation
                         
                         offer.phone = user.phone
                         offer.status = user.status
