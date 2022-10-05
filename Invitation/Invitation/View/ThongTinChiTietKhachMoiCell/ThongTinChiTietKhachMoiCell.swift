@@ -122,23 +122,6 @@ class ThongTinChiTietKhachMoiCell: BaseTableViewCell, UITextViewDelegate {
     }
     
     func setDisplay() {
-        namSinhTextView.setDefaultTitleField()
-        diaChiTextView.setDefaultTitleField()
-        sdtTextView.setDefaultTitleField()
-        tienNhanTextView.setDefaultTitleField()
-        tienDiTextView.setDefaultTitleField()
-        noTextView.setDefaultTitleField()
-        ghiChuTextView.setDefaultTitleField()
-        
-        relationTextView.setDefaultFont()
-        nameTextView.setDefaultFont()
-        ageTextView.setDefaultFont()
-        addressTextView.setDefaultFont()
-        phoneTextView.setDefaultFont()
-        moneyReceivedTextView.setDefaultFont()
-        giftsMonneyTextView.setDefaultFont()
-        oweTextView.setDefaultFont()
-        noteTextView.setDefaultFont()
     }
     
     func fillData() {

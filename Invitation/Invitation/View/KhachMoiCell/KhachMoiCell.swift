@@ -71,12 +71,6 @@ class KhachMoiCell: BaseTableViewCell, UITextViewDelegate {
     }
     
     func setFont() {
-        quanHeTextView.setDefaultTitleField()
-        titleAgeTextView.setDefaultTitleField()
-        titleAddressTV.setDefaultTitleField()
-        titlePhoneTV.setDefaultTitleField()
-        titleStatusTV.setDefaultTitleField()
-        
         statusSwitch.set(width: 45, height: 25)
     }
     

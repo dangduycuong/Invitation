@@ -64,6 +64,7 @@ class LoginVC: BaseViewController, UITextFieldDelegate {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        UserDefaults.standard.set(false, forKey: UserDefaultKey.isLogin.rawValue)
         super.viewWillAppear(animated)
         if isSaveUser == false {
             passwordTextField.text = ""
@@ -213,6 +214,7 @@ class LoginVC: BaseViewController, UITextFieldDelegate {
     }
     
     func nextToMain() {
+        UserDefaults.standard.set(true, forKey: UserDefaultKey.isLogin.rawValue)
         let mainSlideMenuViewController = Storyboard.MainSlide.mainSlideMenuViewController()
         
         let keyWindow = UIApplication.shared.connectedScenes

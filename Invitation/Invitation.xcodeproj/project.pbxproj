@@ -100,6 +100,7 @@
 		FA370D2728ED6A6D004C41CA /* Identifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA370D2628ED6A6D004C41CA /* Identifier.swift */; };
 		FA370D2928ED6AC4004C41CA /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA370D2828ED6AC4004C41CA /* UITableView+Extension.swift */; };
 		FA370D2B28ED6ED9004C41CA /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA370D2A28ED6ED9004C41CA /* UIColor+Extension.swift */; };
+		FA370D2F28ED8921004C41CA /* LandingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA370D2E28ED8921004C41CA /* LandingVC.swift */; };
 		FA8A56C728EC32DD00806E37 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = FA8A56C328EC32DD00806E37 /* LICENSE */; };
 		FA8A56C828EC32DD00806E37 /* SlideMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8A56C528EC32DD00806E37 /* SlideMenuController.swift */; };
 		FA8A56C928EC32DD00806E37 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = FA8A56C628EC32DD00806E37 /* README.md */; };
@@ -244,6 +245,7 @@
 		FA370D2628ED6A6D004C41CA /* Identifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Identifier.swift; sourceTree = "<group>"; };
 		FA370D2828ED6AC4004C41CA /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
 		FA370D2A28ED6ED9004C41CA /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		FA370D2E28ED8921004C41CA /* LandingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingVC.swift; sourceTree = "<group>"; };
 		FA8A56C328EC32DD00806E37 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		FA8A56C528EC32DD00806E37 /* SlideMenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideMenuController.swift; sourceTree = "<group>"; };
 		FA8A56C628EC32DD00806E37 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -649,6 +651,7 @@
 		CE9608B52579DE6200946FE8 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				FA370D2C28ED88FE004C41CA /* Landing */,
 				FA8A56EF28EC385600806E37 /* DetailCustomer */,
 				FA8A56D528EC35C600806E37 /* GoogleMap */,
 				FA8A56C228EC32DD00806E37 /* SlideMenuControllerSwift */,
@@ -676,6 +679,22 @@
 				FA370D2328ED6A2D004C41CA /* MapTypeTableViewCell.xib */,
 			);
 			path = MapTypeTableViewCell;
+			sourceTree = "<group>";
+		};
+		FA370D2C28ED88FE004C41CA /* Landing */ = {
+			isa = PBXGroup;
+			children = (
+				FA370D2D28ED8907004C41CA /* Controller */,
+			);
+			path = Landing;
+			sourceTree = "<group>";
+		};
+		FA370D2D28ED8907004C41CA /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FA370D2E28ED8921004C41CA /* LandingVC.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		FA8A56C228EC32DD00806E37 /* SlideMenuControllerSwift */ = {
@@ -1143,6 +1162,7 @@
 				FA370D2728ED6A6D004C41CA /* Identifier.swift in Sources */,
 				CE402A272578B65F0043EE29 /* Int.swift in Sources */,
 				CE402A1525787E480043EE29 /* ThemKhachMoiVC.swift in Sources */,
+				FA370D2F28ED8921004C41CA /* LandingVC.swift in Sources */,
 				CE0DF6E82580C95B00953B46 /* PopupEditTienMungVC.swift in Sources */,
 				FA8A56C828EC32DD00806E37 /* SlideMenuController.swift in Sources */,
 				FA8A56E828EC35C600806E37 /* PlaceMarker.swift in Sources */,
