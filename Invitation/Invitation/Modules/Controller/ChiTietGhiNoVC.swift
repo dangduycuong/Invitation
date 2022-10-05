@@ -70,9 +70,9 @@ class ChiTietGhiNoVC: BaseViewController {
     
     func setDefaultDataUpdate() {
         updateKM.id = detailKM.id
-        updateKM.ten = detailKM.ten
-        updateKM.tuoi = detailKM.tuoi
-        updateKM.dia_chi = detailKM.dia_chi
+        updateKM.name = detailKM.name
+        updateKM.age = detailKM.age
+        updateKM.address = detailKM.address
         updateKM.phone = detailKM.phone
         updateKM.quan_he = detailKM.quan_he
         updateKM.status = detailKM.status
@@ -194,7 +194,7 @@ extension ChiTietGhiNoVC: UITableViewDelegate, UITableViewDataSource {
             updateKM.quan_he = data.textView.text
         case .name:
             setPlaceholder(textView: data.textView, label: nameLabel, text: "Tên khách mời")
-            updateKM.ten = data.textView.text
+            updateKM.name = data.textView.text
         case .year_of_birth:
             setPlaceholder(textView: data.textView, label: birthLabel, text: "Năm sinh")
             if data.isShowDropdown == true {
@@ -202,10 +202,10 @@ extension ChiTietGhiNoVC: UITableViewDelegate, UITableViewDataSource {
                 showBirth(textView: data.textView)
             }
             
-            updateKM.tuoi = data.textView.text
+            updateKM.age = data.textView.text
         case .address:
             setPlaceholder(textView: data.textView, label: addressLabel, text: "Nhập địa chỉ")
-            updateKM.dia_chi = data.textView.text
+            updateKM.address = data.textView.text
         case .phone:
             setPlaceholder(textView: data.textView, label: phoneLabel, text: "Nhập số điện thoại")
             updateKM.phone = data.textView.text
@@ -299,9 +299,9 @@ extension ChiTietGhiNoVC: UITableViewDelegate, UITableViewDataSource {
     func editKhachMoi() -> ThongTinKhachMoiModel {
         let newInfo = ThongTinKhachMoiModel()
         newInfo.id = detailKM.id
-        newInfo.ten = updateKM.ten
-        newInfo.tuoi = updateKM.tuoi
-        newInfo.dia_chi = updateKM.dia_chi
+        newInfo.name = updateKM.name
+        newInfo.age = updateKM.age
+        newInfo.address = updateKM.address
         newInfo.quan_he = updateKM.quan_he
         newInfo.longitude = updateKM.longitude
         newInfo.latitude = updateKM.latitude
@@ -327,7 +327,7 @@ extension ChiTietGhiNoVC: UITableViewDelegate, UITableViewDataSource {
             })
             return false
         }
-        if updateKM.ten == "" {
+        if updateKM.name == "" {
             showAlertViewController(type: .error, message: "Tên khách mời không được để trống", close: {
                 
             })

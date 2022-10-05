@@ -81,9 +81,9 @@ class KhachMoiCell: BaseTableViewCell, UITextViewDelegate {
     }
     
     func fillData() {
-        tenTextView.text = infoKhachMoi.ten
-        tuoiTextView.text = infoKhachMoi.tuoi
-        diaChiTextView.text = infoKhachMoi.dia_chi
+        tenTextView.text = infoKhachMoi.name
+        tuoiTextView.text = infoKhachMoi.age
+        diaChiTextView.text = infoKhachMoi.address
         quanHeTextView.text = infoKhachMoi.quan_he
         
         //fff

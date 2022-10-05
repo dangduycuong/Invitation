@@ -17,6 +17,15 @@ class WeatherViewModel {
     var cocationCoordinate = CLLocationCoordinate2D()
     var weather: RealtimeWeather?
     weak var delegate: WeatherViewModelDelegate?
+    var address: String = ""
+    
+    func foundCustomerAddress() -> ThongTinKhachMoiModel {
+        let customer = ThongTinKhachMoiModel()
+        customer.address = address
+        customer.latitude = cocationCoordinate.latitude
+        customer.longitude = cocationCoordinate.longitude
+        return customer
+    }
     
     func realtimeWeather() {
         let latitude = cocationCoordinate.latitude

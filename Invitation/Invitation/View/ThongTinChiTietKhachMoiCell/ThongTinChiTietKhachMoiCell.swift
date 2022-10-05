@@ -77,12 +77,12 @@ class ThongTinChiTietKhachMoiCell: BaseTableViewCell, UITextViewDelegate {
     
     func settingDefault() {
         var data = EditInfomation(action: .relation, textView: relationTextView)
-        if infoKM.tuoi == "" {
+        if infoKM.age == "" {
             data.action = .year_of_birth
             data.textView = ageTextView
             closureDefault?(data)
         }
-        if infoKM.dia_chi == "" {
+        if infoKM.address == "" {
             data.action = .address
             data.textView = addressTextView
             closureDefault?(data)
@@ -143,9 +143,9 @@ class ThongTinChiTietKhachMoiCell: BaseTableViewCell, UITextViewDelegate {
     
     func fillData() {
         relationTextView.text = infoKM.quan_he
-        nameTextView.text = infoKM.ten
-        ageTextView.text = infoKM.tuoi
-        addressTextView.text = infoKM.dia_chi
+        nameTextView.text = infoKM.name
+        ageTextView.text = infoKM.age
+        addressTextView.text = infoKM.address
         phoneTextView.text = infoKM.phone
         
         giftsMonneyTextView.text = infoKM.giftMoney?.toDouble()?.displayDecimal(groupingSeparator: " ", decimalSeparator: ",")

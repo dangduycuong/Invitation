@@ -36,6 +36,9 @@ import GoogleMaps
 //}
 
 class WeatherViewController: BaseViewController {
+    
+    @IBOutlet weak var targetView: UIView!
+    @IBOutlet weak var eyeTargetView: UIView!
     @IBOutlet private weak var addressLabel: UILabel!
     @IBOutlet private weak var mapView: GMSMapView!
     @IBOutlet private weak var mapCenterPinImage: UIImageView!
@@ -69,14 +72,8 @@ class WeatherViewController: BaseViewController {
     
     var viewModel = WeatherViewModel()
     var timer = Timer()
-    
-    deinit {
-//        NotificationCenter.default.removeObserver(self, name: .changeMapType, object: nil)
-    }
-}
-
-// MARK: - Lifecycle
-extension WeatherViewController {
+    var infoCustomer = ThongTinKhachMoiModel()
+    var selectAddress: ((_ customer: ThongTinKhachMoiModel) -> Void)?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -96,8 +93,27 @@ extension WeatherViewController {
         viewModel.delegate = self
         mapView.delegate = self
         mapView.mapType = .satellite
-        mapView.animate(toZoom: 17)
+        if infoCustomer.latitude != 0.0 {
+            let camera = GMSCameraPosition(latitude: infoCustomer.latitude, longitude: infoCustomer.longitude, zoom: 17)
+            mapView.animate(to: camera)
+        }
     }
+    
+    deinit {
+//        NotificationCenter.default.removeObserver(self, name: .changeMapType, object: nil)
+    }
+    
+    
+    @IBAction func doneClicked(_ sender: UIButton) {
+        selectAddress?(viewModel.foundCustomerAddress())
+        navigationController?.popViewController(animated: true)
+    }
+}
+
+// MARK: - Lifecycle
+extension WeatherViewController {
+    
+    
     
     @objc func timerAction() {
         viewModel.realtimeWeather()
@@ -112,10 +128,43 @@ extension WeatherViewController {
         weatherInfoView.isHidden = true
         
         navigationBarButtonItems([(ItemType.back, ItemPosition.left), (ItemType.rightMenu, ItemPosition.right)])
+        targetView.backgroundColor = UIColor(hexString: "E3E7ED").withAlphaComponent(0.2)
+        targetView.layer.borderColor = UIColor(hexString: "E3E7ED").cgColor
+        targetView.layer.borderWidth = 2.0
+        targetView.layer.cornerRadius = 20
+        eyeTargetView.layer.cornerRadius = 4
+        eyeTargetView.backgroundColor = UIColor(hexString: "E3E7ED")
     }
     
     override func openRightMenu() {
-        
+        guard let vc = R.storyboard.main.selectMapTypeVC() else {
+            return
+        }
+        vc.modalPresentationStyle = .popover
+        let popover: UIPopoverPresentationController = vc.popoverPresentationController!
+        popover.barButtonItem = navigationItem.rightBarButtonItem
+        popover.sourceRect = CGRect(origin: self.view.center, size: CGSize.zero)
+        popover.delegate = self
+        vc.selectMapType = { [weak self] type in
+            guard let `self` = self else {
+                return
+            }
+            var mapType = GMSMapViewType.normal
+            switch type {
+            case .normal:
+                mapType = .normal
+            case .satellite:
+                mapType = .satellite
+            case .terrain:
+                mapType = .terrain
+            case .hybrid:
+                mapType = .hybrid
+            case .none:
+                mapType = .none
+            }
+            self.mapView.mapType = mapType
+        }
+        present(vc, animated: true, completion: nil)
     }
     
     @objc private func changeMapType(notification: Notification) {
@@ -212,6 +261,7 @@ extension WeatherViewController {
             }
             
             self.addressLabel.text = lines.joined(separator: "\n")
+            self.viewModel.address = lines.joined(separator: "\n")
             
             let labelHeight = self.addressLabel.intrinsicContentSize.height
             let topInset = self.view.safeAreaInsets.top
@@ -348,5 +398,11 @@ extension WeatherViewController: WeatherViewModelDelegate {
         if let text = weather.current?.condition?.text {
             conditionTextLabel.text = text
         }
+    }
+}
+
+extension WeatherViewController: UIPopoverPresentationControllerDelegate {
+    func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle {
+        return .none
     }
 }

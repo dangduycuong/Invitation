@@ -178,7 +178,7 @@ class HomeViewController: BaseViewController, UITextFieldDelegate {
             return
         }
         suggestKhachMoi = array.filter { (data: ThongTinKhachMoiModel) in
-            if let name = data.ten?.lowercased(), let address = data.dia_chi?.lowercased(), let phone = data.phone?.lowercased() {
+            if let name = data.name?.lowercased(), let address = data.address?.lowercased(), let phone = data.phone?.lowercased() {
                 if name.range(of: text) != nil || address.range(of: text) != nil || phone.range(of: text) != nil {
                     return true
                 }
@@ -419,9 +419,9 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
                 realm.beginWrite()
                 for offer in offers {
                     if offer.id == user.id {
-                        offer.ten = user.ten
-                        offer.tuoi = user.tuoi
-                        offer.dia_chi = user.dia_chi
+                        offer.name = user.name
+                        offer.age = user.age
+                        offer.address = user.address
                         offer.quan_he = user.quan_he
                         
                         offer.phone = user.phone

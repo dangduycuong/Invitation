@@ -249,10 +249,10 @@ class GuestDetailsVC: BaseViewController {
     
     func fillData() {
         quanHeTextView.text = detailKhach.quan_he
-        tenTextView.text = detailKhach.ten
-        tuoiTextView.text = detailKhach.tuoi
+        tenTextView.text = detailKhach.name
+        tuoiTextView.text = detailKhach.age
         phoneTextView.text = detailKhach.phone
-        diaChiTextView.text = detailKhach.dia_chi
+        diaChiTextView.text = detailKhach.address
         longitudeTextView.text = "\(detailKhach.longitude)"
         latitudeTextView.text = "\(detailKhach.latitude)"
         diMungTextView.text = detailKhach.giftMoney?.toDouble()?.displayDecimal(groupingSeparator: " ", decimalSeparator: ",")
@@ -267,12 +267,12 @@ class GuestDetailsVC: BaseViewController {
         noteTextView.text = detailKhach.note
     }
     
-    func editKhachMoi() -> ThongTinKhachMoiModel {
+    func updateCustomer() -> ThongTinKhachMoiModel {
         let newInfo = ThongTinKhachMoiModel()
         newInfo.id = detailKhach.id
-        newInfo.ten = tenTextView.text
-        newInfo.tuoi = tuoiTextView.text
-        newInfo.dia_chi = diaChiTextView.text
+        newInfo.name = tenTextView.text
+        newInfo.age = tuoiTextView.text
+        newInfo.address = diaChiTextView.text
         newInfo.quan_he = quanHeTextView.text
         if let longitude = longitudeTextView.text.toDouble(), let latitude = latitudeTextView.text.toDouble() {
             newInfo.longitude = longitude
@@ -320,24 +320,22 @@ class GuestDetailsVC: BaseViewController {
         }, ok: {
             //            self.editKhachMoi()
             if let closureUpdate = self.closureUpdate {
-                closureUpdate(self.editKhachMoi())
+                closureUpdate(self.updateCustomer())
             }
             self.navigationController?.popViewController(animated: true)
         })
     }
     
     @IBAction func tapSelectMap(_ sender: Any) {
-//        title = ""
-//        let vc = Storyboard.Main.chonDiaDiemVC()
-//        vc.titleString = "Nhà khách mời"
-//        vc.passCoordinate = { [weak self] infoKM in
-//            self?.longitudeTextView.text = "\(infoKM.longitude)"
-//            self?.latitudeTextView.text = "\(infoKM.latitude)"
-//        }
-//        navigationController?.pushViewController(vc, animated: true)
-        
         guard let vc = R.storyboard.weather.weatherViewController() else {
             return
+        }
+        vc.infoCustomer = detailKhach
+        vc.selectAddress = { [weak self] infoCustomer in
+            guard let `self` = self else { return }
+            self.latitudeTextView.text = "\(infoCustomer.latitude)"
+            self.longitudeTextView.text = "\(infoCustomer.longitude)"
+            self.diaChiTextView.text = infoCustomer.address
         }
         navigationController?.pushViewController(vc, animated: true)
     }

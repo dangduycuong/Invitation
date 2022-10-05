@@ -322,6 +322,8 @@ class LoginVC: BaseViewController, UITextFieldDelegate {
         present(vc, animated: true, completion: nil)
     }
     @IBAction func tapLogin(_ sender: Any) {
+        usernameTextField.text = "admin"
+        passwordTextField.text = "admin"
         if validateLogin() {
             authenticateLogin()
         }

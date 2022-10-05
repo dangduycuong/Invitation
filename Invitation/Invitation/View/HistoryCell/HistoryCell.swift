@@ -64,9 +64,9 @@ class HistoryCell: BaseTableViewCell {
     
     func fillData() {
         quanHeTextView.text = infoKM.quan_he
-        tenTextView.text = infoKM.ten
-        ageTextView.text = infoKM.tuoi
-        addressTextView.text = infoKM.dia_chi
+        tenTextView.text = infoKM.name
+        ageTextView.text = infoKM.age
+        addressTextView.text = infoKM.address
         giftMoneyTextView.text = infoKM.giftMoney?.toDouble()?.displayDecimal(groupingSeparator: " ", decimalSeparator: ",")
         moneyReceivedTextView.text = infoKM.moneyReceived?.toDouble()?.displayDecimal(groupingSeparator: " ", decimalSeparator: ",")
         

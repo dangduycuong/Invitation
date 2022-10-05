@@ -404,9 +404,9 @@ class ThemKhachMoiVC: BaseViewController, UITextViewDelegate {
         let newUser = ThongTinKhachMoiModel()
         newUser.id = String.random()
         
-        newUser.ten = tenKhachMoiTextView.text
-        newUser.tuoi = tuoiTextView.text
-        newUser.dia_chi = diaChiTextView.text
+        newUser.name = tenKhachMoiTextView.text
+        newUser.age = tuoiTextView.text
+        newUser.address = diaChiTextView.text
         newUser.quan_he = chiTietQuanHeTextView.text
         if let phone = phoneTextView.text {
             newUser.phone = phone

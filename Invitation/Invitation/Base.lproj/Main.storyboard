@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="k0D-A0-uE5">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="k0D-A0-uE5">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -289,7 +288,7 @@
                                 <rect key="frame" x="8" y="52" width="398" height="40"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="magnifyingglass" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="eMq-BB-SYh">
-                                        <rect key="frame" x="8" y="11" width="20" height="18"/>
+                                        <rect key="frame" x="8" y="10.5" width="20" height="18.5"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="20" id="Lux-yo-RWa"/>
                                             <constraint firstAttribute="width" constant="20" id="a1b-Sz-3xD"/>
@@ -413,6 +412,40 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Nq-S8-UJb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-607" y="1585"/>
+        </scene>
+        <!--Select Map TypeVC-->
+        <scene sceneID="FRc-vb-QCV">
+            <objects>
+                <viewController storyboardIdentifier="SelectMapTypeVC" id="8UH-vD-wJy" customClass="SelectMapTypeVC" customModule="Invitation" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SSu-xm-63r">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="g9I-3W-ww0">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="8UH-vD-wJy" id="McW-KI-H5V"/>
+                                    <outlet property="delegate" destination="8UH-vD-wJy" id="7wv-L0-sLh"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="HTI-nn-Amn"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="g9I-3W-ww0" secondAttribute="bottom" id="9JT-Pg-vye"/>
+                            <constraint firstItem="g9I-3W-ww0" firstAttribute="top" secondItem="SSu-xm-63r" secondAttribute="top" id="RfP-Wx-xRr"/>
+                            <constraint firstItem="g9I-3W-ww0" firstAttribute="leading" secondItem="SSu-xm-63r" secondAttribute="leading" id="Y09-mu-6Nv"/>
+                            <constraint firstAttribute="trailing" secondItem="g9I-3W-ww0" secondAttribute="trailing" id="cF2-dg-bQa"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="g9I-3W-ww0" id="MBc-KF-C2h"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="D5H-Qb-ZZw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-607" y="2312"/>
         </scene>
         <!--Wedding Photo ListVC-->
         <scene sceneID="EuS-h4-TOI">
@@ -968,7 +1001,7 @@ func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMe
                                 <rect key="frame" x="8" y="144" width="398" height="40"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="magnifyingglass" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="1MD-Fa-6Po">
-                                        <rect key="frame" x="8" y="11" width="20" height="18"/>
+                                        <rect key="frame" x="8" y="10.5" width="20" height="18.5"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="20" id="5dQ-BT-eal"/>
                                             <constraint firstAttribute="width" constant="20" id="RqA-Pr-tKm"/>
@@ -1733,7 +1766,7 @@ func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMe
                                 <rect key="frame" x="0.0" y="144" width="414" height="40"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="magnifyingglass" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Pu5-ty-hkW">
-                                        <rect key="frame" x="8" y="11" width="20" height="18"/>
+                                        <rect key="frame" x="8" y="10.5" width="20" height="18.5"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="20" id="obq-Qx-HgT"/>
                                             <constraint firstAttribute="width" constant="20" id="pAk-CR-be5"/>

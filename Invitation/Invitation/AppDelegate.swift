@@ -11,6 +11,7 @@ import GoogleMaps
 import GooglePlaces
 import UserNotifications
 import IQKeyboardManagerSwift
+import RealmSwift
 
 //let googleApiKey = "AIzaSyC6a50plf6zJbvuBcmzBpRd3CQp4BRy1yI"
 let googleApiKey = "AIzaSyBjK7ZifDuLbogjhWx9XjpIcRlczC6c-I0"
@@ -31,8 +32,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         UNUserNotificationCenter.current().delegate = self
         
         configKeyboard()
+        configRealmDB()
         
         return true
+    }
+    
+    private func configRealmDB() {
+//        let mySchemaVersion = 3
+//        let config = Realm.Configuration(schemaVersion: UInt64(mySchemaVersion), migrationBlock: { migration, oldSchemaVersion in
+//            if oldSchemaVersion < 4 {
+//                migration.enumerateObjects(ofType: ThongTinKhachMoiModel.className()) { oldObject, newObject in
+//                    // combine name fields into a single field
+//                }
+//                migration.renameProperty(onType: ThongTinKhachMoiModel.className(), from: "ten", to: "name")
+//            }
+//        })
+//        Realm.Configuration.defaultConfiguration = config
     }
 
     // MARK: UISceneSession Lifecycle

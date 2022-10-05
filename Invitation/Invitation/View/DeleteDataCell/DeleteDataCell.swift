@@ -44,9 +44,9 @@ class DeleteDataCell: BaseTableViewCell {
     
     func fillData() {
         relationTextView.text = infoKM.quan_he
-        nameTextView.text = infoKM.ten
-        ageTextView.text = infoKM.tuoi
-        addressTextView.text = infoKM.dia_chi
+        nameTextView.text = infoKM.name
+        ageTextView.text = infoKM.age
+        addressTextView.text = infoKM.address
         giftMoneyTextView.text = infoKM.giftMoney?.toDouble()?.displayDecimal(groupingSeparator: " ", decimalSeparator: ",")
         receivedMoneyTextView.text = infoKM.moneyReceived?.toDouble()?.displayDecimal(groupingSeparator: " ", decimalSeparator: ",")
         noteTextView.text = infoKM.note
