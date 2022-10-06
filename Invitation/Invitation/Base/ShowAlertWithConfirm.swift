@@ -58,7 +58,7 @@ class ShowAlertWithConfirm: UIViewController {
             .paragraphStyle: style
         ]
         
-        var attributeString = NSAttributedString(string: "Đồng Ý", attributes: attributes)
+        var attributeString = NSAttributedString(string: "Đồng ý", attributes: attributes)
         okButton.setAttributedTitle(attributeString, for: .normal)
         attributeString = NSAttributedString(string: "Hủy", attributes: attributes)
         cancelButton.setAttributedTitle(attributeString, for: .normal)

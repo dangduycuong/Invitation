@@ -106,6 +106,10 @@ class ThemKhachMoiVC: BaseViewController, UITextViewDelegate {
         dropdown.dismissMode = .onTap
         
         //optional
+        if let font = R.font.playfairDisplayRegular(size: 17) {
+            dropdown.textFont = font
+        }
+        dropdown.separatorColor = .clear
         dropdown.selectionAction = { [unowned self] (index: Int, item: String) in
             print("Selected item: \(item) at index: \(index)")
             textView.text = self.suggestBirth[index]
@@ -206,8 +210,11 @@ class ThemKhachMoiVC: BaseViewController, UITextViewDelegate {
         dropdown.dismissMode = .onTap
         
         //optional
+        if let font = R.font.playfairDisplayRegular(size: 17) {
+            dropdown.textFont = font
+        }
+        dropdown.separatorColor = UIColor.clear
         dropdown.selectionAction = { [unowned self] (index: Int, item: String) in
-            print("Selected item: \(item) at index: \(index)")
             self.chiTietQuanHeTextView.text = self.listSuggestRelation[index]
             self.chiTietQuanHeTextView.resignFirstResponder()
         }

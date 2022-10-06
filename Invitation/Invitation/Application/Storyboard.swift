@@ -86,10 +86,6 @@ extension Storyboard {
         static func chiTietGhiNoVC() -> ChiTietGhiNoVC {
             return manager.instantiateViewController(withIdentifier: "ChiTietGhiNoVC") as! ChiTietGhiNoVC
         }
-        
-        static func guestDetailsVC() -> GuestDetailsVC {
-            return manager.instantiateViewController(withIdentifier: "GuestDetailsVC") as! GuestDetailsVC
-        }
     }
     
     struct TutorialStoryboard {

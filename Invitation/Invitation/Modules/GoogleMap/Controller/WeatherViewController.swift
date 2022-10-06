@@ -116,7 +116,7 @@ extension WeatherViewController {
     
     
     @objc func timerAction() {
-        viewModel.realtimeWeather()
+//        viewModel.realtimeWeather()
     }
     
     private func setupUI() {
@@ -127,7 +127,7 @@ extension WeatherViewController {
         weatherInfoView.layer.cornerRadius = 10
         weatherInfoView.isHidden = true
         
-        navigationBarButtonItems([(ItemType.back, ItemPosition.left), (ItemType.rightMenu, ItemPosition.right)])
+        navigationBarButtonItems([(ItemType.back, ItemPosition.left), (ItemType.direction, ItemPosition.right),(ItemType.rightMenu, ItemPosition.right)])
         targetView.backgroundColor = UIColor(hexString: "E3E7ED").withAlphaComponent(0.2)
         targetView.layer.borderColor = UIColor(hexString: "E3E7ED").cgColor
         targetView.layer.borderWidth = 2.0
@@ -146,26 +146,24 @@ extension WeatherViewController {
         popover.barButtonItem = navigationItem.rightBarButtonItem
         popover.sourceRect = CGRect(origin: self.view.center, size: CGSize.zero)
         popover.delegate = self
-        vc.selectMapType = { [weak self] type in
+        vc.selectMapType = { [weak self] mapType in
             guard let `self` = self else {
                 return
-            }
-            var mapType = GMSMapViewType.normal
-            switch type {
-            case .normal:
-                mapType = .normal
-            case .satellite:
-                mapType = .satellite
-            case .terrain:
-                mapType = .terrain
-            case .hybrid:
-                mapType = .hybrid
-            case .none:
-                mapType = .none
             }
             self.mapView.mapType = mapType
         }
         present(vc, animated: true, completion: nil)
+    }
+    
+    override func directionAction() {
+        guard let vc = R.storyboard.main.directVC() else {
+            return
+        }
+        let latitude = infoCustomer.latitude
+        let longtitude = infoCustomer.longitude
+        vc.latitude = latitude.toString()
+        vc.longitude = longtitude.toString()
+        navigationController?.pushViewController(vc, animated: true)
     }
     
     @objc private func changeMapType(notification: Notification) {

@@ -1,30 +1,15 @@
 //
-//  GuestDetailsVC.swift
+//  CustomerDetailVC.swift
 //  Invitation
 //
-//  Created by cuongdd on 04/10/2022.
+//  Created by cuongdd on 06/10/2022.
 //  Copyright © 2022 Dang Duy Cuong. All rights reserved.
 //
 
 import UIKit
-import RealmSwift
-import Realm
 
-class GuestDetailsVC: BaseViewController {
-    
-    //title
-    @IBOutlet weak var titleAgeTextView: UITextView!
-    @IBOutlet weak var titlePhoneTextView: UITextView!
-    @IBOutlet weak var titleAddressTextView: UITextView!
-    @IBOutlet weak var titleLongitudeTextView: UITextView!
-    
-    @IBOutlet weak var titleLatitudeTextView: UITextView!
-    @IBOutlet weak var titleDiMungTextView: UITextView!
-    @IBOutlet weak var titleNhanTextView: UITextView!
-    @IBOutlet weak var titleNoTextView: UITextView!
-    
+class CustomerDetailVC: BaseViewController {
     @IBOutlet weak var titleStatusTextView: UITextView!
-    @IBOutlet weak var titleNoteTextView: UITextView!
     
     //data
     @IBOutlet weak var quanHeTextView: UITextView!
@@ -33,8 +18,6 @@ class GuestDetailsVC: BaseViewController {
     @IBOutlet weak var phoneTextView: UITextView!
     
     @IBOutlet weak var diaChiTextView: UITextView!
-    @IBOutlet weak var longitudeTextView: UITextView!
-    @IBOutlet weak var latitudeTextView: UITextView!
     @IBOutlet weak var diMungTextView: UITextView!
     
     @IBOutlet weak var nhanTextView: UITextView!
@@ -44,8 +27,6 @@ class GuestDetailsVC: BaseViewController {
     
     @IBOutlet weak var editDiMungButton: UIButton!
     @IBOutlet weak var editTienNhanButton: UIButton!
-    
-    @IBOutlet weak var cancelButton: UIButton!
     @IBOutlet weak var updateButton: UIButton!
     @IBOutlet weak var scrollview: UIScrollView!
     
@@ -67,11 +48,12 @@ class GuestDetailsVC: BaseViewController {
     
     var sourceRelation = ["Anh", "Bố", "Bạn", "Bác", "Chú", "Chị", "Cậu", "Cô", "Con", "Em", "Dì", "Dượng", "Mợ", "Người yêu cũ", "Thím", "Thầy"]
     var listSuggestRelation = [String]()
-    let dropdown = DropDown()
+    let relationDropdown = DropDown()
     
     var listBirth = [String]()
     var suggestBirth = [String]()
     private var viewModel = GuestDetailsViewModel()
+    private var ageDropDown = DropDown()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -96,6 +78,8 @@ class GuestDetailsVC: BaseViewController {
         setDisplay()
         navigationBarButtonItems([(.back, .left)])
         viewModel.setupData(customer: detailKhach)
+        
+        configDropDown()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -103,87 +87,78 @@ class GuestDetailsVC: BaseViewController {
         title = "Chi tiết khách mời"
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-    }
-    
-    func filterRelation() {
-        if quanHeTextView.text == "" {
-            listSuggestRelation = sourceRelation
-        } else {
-            listSuggestRelation = sourceRelation.filter { (relation: String) in
-                if let text = quanHeTextView.text {
-                    let content = relation.lowercased()
-                    let key = text.lowercased()
-                    if content.range(of: key) != nil {
-                        return true
-                    }
-                }
-                
-                return false
-            }
-        }
-    }
-    
-    func filterBirth(text: String) {
-        if text == "" {
-            suggestBirth = listBirth
-        } else {
-            suggestBirth = listBirth.filter { (relation: String) in
-                return relation.lowercased().range(of: text.lowercased()) != nil
-            }
-        }
-    }
-    
-    func showRelation() {
-        dropdown.dataSource = listSuggestRelation
-        dropdown.anchorView = quanHeTextView
-        dropdown.direction = .bottom
-        dropdown.bottomOffset = CGPoint(x: 0, y: quanHeTextView.bounds.size.height)
-        dropdown.dismissMode = .onTap
+    private func configDropDown() {
+        ageDropDown.anchorView = tuoiTextView
+        ageDropDown.direction = .bottom
+        ageDropDown.bottomOffset = CGPoint(x: 0, y: tuoiTextView.bounds.size.height + 8)
+        ageDropDown.dismissMode = .onTap
         
         //optional
-        dropdown.selectionAction = { [unowned self] (index: Int, item: String) in
-            self.quanHeTextView.text = self.listSuggestRelation[index]
-            self.relationLabel.isHidden = true
-            self.quanHeTextView.resignFirstResponder()
+        if let font = R.font.playfairDisplayRegular(size: 17) {
+            ageDropDown.textFont = font
         }
-        
-        dropdown.show()
-    }
-    
-    func showBirth() {
-        dropdown.dataSource = suggestBirth
-        dropdown.anchorView = tuoiTextView
-        dropdown.direction = .bottom
-        dropdown.bottomOffset = CGPoint(x: 0, y: tuoiTextView.bounds.size.height)
-        dropdown.dismissMode = .onTap
-        
-        //optional
-        dropdown.selectionAction = { [unowned self] (index: Int, item: String) in
-            print("Selected item: \(item) at index: \(index)")
+        ageDropDown.separatorColor = .clear
+        ageDropDown.selectionAction = { [unowned self] (index: Int, item: String) in
             self.tuoiTextView.text = self.suggestBirth[index]
             self.ageLabel.isHidden = true
             self.tuoiTextView.resignFirstResponder()
         }
         
-        dropdown.show()
+        relationDropdown.anchorView = quanHeTextView
+        relationDropdown.direction = .bottom
+        relationDropdown.bottomOffset = CGPoint(x: 0, y: quanHeTextView.bounds.size.height + 8)
+        relationDropdown.dismissMode = .onTap
+        
+        if let font = R.font.playfairDisplayRegular(size: 17) {
+            relationDropdown.textFont = font
+        }
+        relationDropdown.separatorColor = .clear
+        relationDropdown.selectionAction = { [unowned self] (index: Int, item: String) in
+            self.quanHeTextView.text = self.listSuggestRelation[index]
+            self.relationLabel.isHidden = true
+            self.quanHeTextView.resignFirstResponder()
+        }
+    }
+    
+    private func filterAndShowRelation() {
+        if quanHeTextView.text == "" {
+            listSuggestRelation = sourceRelation
+        } else {
+            listSuggestRelation = sourceRelation.filter { text in
+                if let keyWord = quanHeTextView.text {
+                    if text.unaccent().lowercased().range(of: keyWord.unaccent().lowercased()) != nil {
+                        return true
+                    }
+                }
+                return false
+            }
+        }
+        
+        relationDropdown.dataSource = listSuggestRelation
+        relationDropdown.show()
+    }
+    
+    func filterBirth() {
+        if tuoiTextView.text == "" {
+            suggestBirth = listBirth
+        } else {
+            suggestBirth = listBirth.filter { (age: String) in
+                if let text = tuoiTextView.text {
+                    if age.range(of: text) != nil {
+                        return true
+                    }
+                }
+                return false
+            }
+        }
+        ageDropDown.dataSource = suggestBirth
+        ageDropDown.show()
     }
     
     func setDisplay() {
         //title font
-        titleAgeTextView.setDefaultTitleField()
-        titlePhoneTextView.setDefaultTitleField()
-        titleAddressTextView.setDefaultTitleField()
-        titleLongitudeTextView.setDefaultTitleField()
-        
-        titleLatitudeTextView.setDefaultTitleField()
-        titleDiMungTextView.setDefaultTitleField()
-        titleNhanTextView.setDefaultTitleField()
-        titleNoTextView.setDefaultTitleField()
         
         titleStatusTextView.setDefaultTitleField()
-        titleNoteTextView.setDefaultTitleField()
         
         //data font
         quanHeTextView.setDefaultFont()
@@ -192,8 +167,6 @@ class GuestDetailsVC: BaseViewController {
         phoneTextView.setDefaultFont()
         
         diaChiTextView.setDefaultFont()
-        longitudeTextView.setDefaultFont()
-        latitudeTextView.setDefaultFont()
         diMungTextView.setDefaultFont()
         
         nhanTextView.setDefaultFont()
@@ -201,7 +174,6 @@ class GuestDetailsVC: BaseViewController {
         noteTextView.setDefaultFont()
         
         //button
-        cancelButton.setDefaultButton()
         updateButton.setDefaultButton()
     }
     
@@ -211,8 +183,6 @@ class GuestDetailsVC: BaseViewController {
         tuoiTextView.delegate = self
         diaChiTextView.delegate = self
         phoneTextView.delegate = self
-        longitudeTextView.delegate = self
-        latitudeTextView.delegate = self
         noteTextView.delegate = self
         
         diMungTextView.delegate = self
@@ -220,25 +190,25 @@ class GuestDetailsVC: BaseViewController {
     }
     
     func changeKeyboardTypeDuringRuntime() {
-        if let text = longitudeTextView.text {
-            if text.contains(".") || text.contains(",") {
-                longitudeTextView.text = text.replacingOccurrences(of: ",", with: ".")
-                longitudeTextView.keyboardType = .numberPad
-            } else {
-                longitudeTextView.keyboardType = .decimalPad
-            }
-            longitudeTextView.reloadInputViews()
-        }
-        
-        if let text = latitudeTextView.text {
-            if text.contains(".") || text.contains(",") {
-                latitudeTextView.text = text.replacingOccurrences(of: ",", with: ".")
-                latitudeTextView.keyboardType = .numberPad
-            } else {
-                latitudeTextView.keyboardType = .decimalPad
-            }
-            latitudeTextView.reloadInputViews()
-        }
+//        if let text = longitudeTextView.text {
+//            if text.contains(".") || text.contains(",") {
+//                longitudeTextView.text = text.replacingOccurrences(of: ",", with: ".")
+//                longitudeTextView.keyboardType = .numberPad
+//            } else {
+//                longitudeTextView.keyboardType = .decimalPad
+//            }
+//            longitudeTextView.reloadInputViews()
+//        }
+//
+//        if let text = latitudeTextView.text {
+//            if text.contains(".") || text.contains(",") {
+//                latitudeTextView.text = text.replacingOccurrences(of: ",", with: ".")
+//                latitudeTextView.keyboardType = .numberPad
+//            } else {
+//                latitudeTextView.keyboardType = .decimalPad
+//            }
+//            latitudeTextView.reloadInputViews()
+//        }
     }
     
     func fillData() {
@@ -247,8 +217,6 @@ class GuestDetailsVC: BaseViewController {
         tuoiTextView.text = detailKhach.age
         phoneTextView.text = detailKhach.phone
         diaChiTextView.text = detailKhach.address
-        longitudeTextView.text = "\(detailKhach.longitude)"
-        latitudeTextView.text = "\(detailKhach.latitude)"
         diMungTextView.text = detailKhach.giftMoney?.toDouble()?.displayDecimal(groupingSeparator: " ", decimalSeparator: ",")
         nhanTextView.text = detailKhach.moneyReceived?.toDouble()?.displayDecimal(groupingSeparator: " ", decimalSeparator: ",")
         
@@ -259,6 +227,7 @@ class GuestDetailsVC: BaseViewController {
         
         switchStatus.isOn = detailKhach.status
         noteTextView.text = detailKhach.note
+        titleStatusTextView.text = detailKhach.status ? "Đã mời khách" : "Chưa mời khách"
     }
     
     @IBAction func tapCancel(_ sender: Any) {
@@ -314,8 +283,6 @@ class GuestDetailsVC: BaseViewController {
         vc.infoCustomer = detailKhach
         vc.selectAddress = { [weak self] infoCustomer in
             guard let `self` = self else { return }
-            self.latitudeTextView.text = "\(infoCustomer.latitude)"
-            self.longitudeTextView.text = "\(infoCustomer.longitude)"
             self.diaChiTextView.text = infoCustomer.address
             self.viewModel.updateAddressCustomer(customer: infoCustomer)
         }
@@ -397,6 +364,11 @@ class GuestDetailsVC: BaseViewController {
         }
     }
     
+    
+    @IBAction func switchValueChanged(_ sender: UISwitch) {
+        titleStatusTextView.text = switchStatus.isOn ? "Đã mời khách" : "Chưa mời khách"
+    }
+    
     func validateOwe() {
         if let diMung = diMungTextView.text, let nhan = nhanTextView.text {
             let tienMung = diMung.replacingOccurrences(of: " ", with: "").toInt() ?? 0
@@ -423,18 +395,14 @@ class GuestDetailsVC: BaseViewController {
     
 }
 
-extension GuestDetailsVC: UITextViewDelegate {
+extension CustomerDetailVC: UITextViewDelegate {
     //MARK: Delegate TextView
     func textViewDidBeginEditing(_ textView: UITextView) {
         switch textView {
         case quanHeTextView:
-            filterRelation()
-            showRelation()
+            filterAndShowRelation()
         case tuoiTextView:
-            if let text = tuoiTextView.text {
-                filterBirth(text: text)
-                showBirth()
-            }
+            filterBirth()
         case diMungTextView:
             changeDiMungByPopup = false
             editDiMungButton.setImage(#imageLiteral(resourceName: "icons8-delete_sign_filled"), for: .normal)
@@ -447,10 +415,6 @@ extension GuestDetailsVC: UITextViewDelegate {
             if nhanTextView.text == "0" {
                 nhanTextView.text = ""
             }
-        case longitudeTextView:
-            changeKeyboardTypeDuringRuntime()
-        case latitudeTextView:
-            changeKeyboardTypeDuringRuntime()
         default:
             break
         }
@@ -460,7 +424,7 @@ extension GuestDetailsVC: UITextViewDelegate {
         if text == "\n" {
             textView.resignFirstResponder()
         }
-        dropdown.hide()
+        relationDropdown.hide()
         switch textView {
         case tenTextView:
             return tenTextView.text.count + (text.count - range.length) <= 50
@@ -481,17 +445,9 @@ extension GuestDetailsVC: UITextViewDelegate {
     func textViewDidChange(_ textView: UITextView) {
         switch textView {
         case quanHeTextView:
-            filterRelation()
-            showRelation()
+            filterAndShowRelation()
         case tuoiTextView:
-            if let text = tuoiTextView.text {
-                filterBirth(text: text)
-                showBirth()
-            }
-        case longitudeTextView:
-            changeKeyboardTypeDuringRuntime()
-        case latitudeTextView:
-            changeKeyboardTypeDuringRuntime()
+            filterBirth()
         case diMungTextView:
             if diMungTextView.text.hasPrefix("0") {
                 diMungTextView.text = ""
@@ -534,4 +490,5 @@ extension GuestDetailsVC: UITextViewDelegate {
         }
     }
 }
+
 

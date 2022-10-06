@@ -57,9 +57,6 @@ class LoginVC: BaseViewController, UITextFieldDelegate {
         setFirstRunApp()
         
         setupNotification()
-        let font = UIFont(name: "TrebuchetMS-Bold", size: 18)
-        currentTimeLabel.font = font
-        nameLabel.font = UIFont(name: "TrebuchetMS-Bold", size: 20)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -69,6 +66,9 @@ class LoginVC: BaseViewController, UITextFieldDelegate {
             passwordTextField.text = ""
         }
         navigationController?.navigationBar.isHidden = true
+        if let wife = UserDefaults.standard.string(forKey: UserDefaultKey.wife.rawValue), let husband = UserDefaults.standard.string(forKey: UserDefaultKey.husband.rawValue) {
+            nameLabel.text = wife + " ❦ " + husband
+        }
     }
     
     override func viewDidLayoutSubviews() {

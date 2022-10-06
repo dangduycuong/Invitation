@@ -14,6 +14,7 @@ enum ItemPosition {
 
 enum ItemType {
     case back, leftMenu, rightReload, rightCallSupport, rightViewInfo, rightUpdate, rightAdd, rightMenu, rightUpdateLocation
+    case direction
 }
 
 extension UIViewController {
@@ -55,7 +56,7 @@ extension UIViewController {
                 
             case .rightReload:
                 let backButton = UIButton(frame: CGRect(x: 0, y: 0, width: 25, height: 44))
-                backButton.setImage(UIImage(named: "reload-icon"), for: .normal)
+                backButton.setImage(R.image.dang_xuat(), for: .normal)
                 backButton.showsTouchWhenHighlighted = true
                 backButton.addTarget(self, action: #selector(reloadAction), for: .touchUpInside)
                 backButton.contentEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: -10)
@@ -118,6 +119,14 @@ extension UIViewController {
                 let menuItem = UIBarButtonItem(customView: menuButton)
                 item = menuItem
                 
+            case .direction:
+                let menuButton = UIButton(frame: CGRect(x: 0, y: 0, width: 44, height: 44))
+                menuButton.setImage(R.image.directions_24px(), for: .normal)
+                menuButton.showsTouchWhenHighlighted = true
+                menuButton.addTarget(self, action: #selector(directionAction), for: .touchUpInside)
+                menuButton.contentEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: -10)
+                let menuItem = UIBarButtonItem(customView: menuButton)
+                item = menuItem
             }
             
             guard let guardItem = item else {
@@ -165,6 +174,10 @@ extension UIViewController {
     }
     
     @objc func reloadAction() {
+        
+    }
+    
+    @objc func directionAction() {
         
     }
     

@@ -23,6 +23,7 @@ class TutorialVC: BaseViewController, UICollectionViewDelegate, UICollectionView
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupNavigationBar()
         setupPageControll()
         navigationController?.navigationBar.isHidden = false
         navigationBarButtonItems([(ItemType.back, ItemPosition.left)])

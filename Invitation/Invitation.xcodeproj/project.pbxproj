@@ -118,9 +118,9 @@
 		FA8A56EA28EC35C600806E37 /* MarkerInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8A56E128EC35C600806E37 /* MarkerInfoView.swift */; };
 		FA8A56EB28EC35C600806E37 /* MarkerInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA8A56E228EC35C600806E37 /* MarkerInfoView.xib */; };
 		FA8A56EE28EC35D700806E37 /* Weather.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA8A56ED28EC35D700806E37 /* Weather.storyboard */; };
-		FA8A56F228EC38CE00806E37 /* GuestDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8A56F128EC38CE00806E37 /* GuestDetailsVC.swift */; };
 		FA92E73128EE7489006DB462 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA92E73028EE7489006DB462 /* HomeViewModel.swift */; };
 		FA92E73428EE794D006DB462 /* GuestDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA92E73328EE794D006DB462 /* GuestDetailsViewModel.swift */; };
+		FA92E77628EEC22E006DB462 /* CustomerDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA92E77528EEC22E006DB462 /* CustomerDetailVC.swift */; };
 		FADDBA3428EDE62500381236 /* TitleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FADDBA3328EDE62500381236 /* TitleView.xib */; };
 		FADDBA3628EDE63600381236 /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADDBA3528EDE63600381236 /* TitleView.swift */; };
 /* End PBXBuildFile section */
@@ -267,9 +267,9 @@
 		FA8A56E128EC35C600806E37 /* MarkerInfoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarkerInfoView.swift; sourceTree = "<group>"; };
 		FA8A56E228EC35C600806E37 /* MarkerInfoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MarkerInfoView.xib; sourceTree = "<group>"; };
 		FA8A56ED28EC35D700806E37 /* Weather.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Weather.storyboard; sourceTree = "<group>"; };
-		FA8A56F128EC38CE00806E37 /* GuestDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestDetailsVC.swift; sourceTree = "<group>"; };
 		FA92E73028EE7489006DB462 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		FA92E73328EE794D006DB462 /* GuestDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestDetailsViewModel.swift; sourceTree = "<group>"; };
+		FA92E77528EEC22E006DB462 /* CustomerDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerDetailVC.swift; sourceTree = "<group>"; };
 		FADDBA3328EDE62500381236 /* TitleView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TitleView.xib; sourceTree = "<group>"; };
 		FADDBA3528EDE63600381236 /* TitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -814,7 +814,7 @@
 		FA8A56F028EC386A00806E37 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				FA8A56F128EC38CE00806E37 /* GuestDetailsVC.swift */,
+				FA92E77528EEC22E006DB462 /* CustomerDetailVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1194,7 +1194,6 @@
 				CE4029F425787DD20043EE29 /* String.swift in Sources */,
 				CE4029ED25787DAC0043EE29 /* TableView.swift in Sources */,
 				CE4029F225787DD20043EE29 /* UIView.swift in Sources */,
-				FA8A56F228EC38CE00806E37 /* GuestDetailsVC.swift in Sources */,
 				CE402A0C25787E2C0043EE29 /* ThongTinKhachMoiModel.swift in Sources */,
 				CE2484E0257A17780054E198 /* WeddingImageCell.swift in Sources */,
 				CE4029D625787D860043EE29 /* Storyboard.swift in Sources */,
@@ -1226,6 +1225,7 @@
 				FADDBA3628EDE63600381236 /* TitleView.swift in Sources */,
 				CE0DF6DD25807B4500953B46 /* DirectVC.swift in Sources */,
 				8174CEA8259315F800876CA1 /* Date.swift in Sources */,
+				FA92E77628EEC22E006DB462 /* CustomerDetailVC.swift in Sources */,
 				CEFC6A9D2581CE59001701BA /* VLocation.swift in Sources */,
 				CE20440B2581BE7400662FBB /* UILabel.swift in Sources */,
 				CE4029A825787B820043EE29 /* SceneDelegate.swift in Sources */,

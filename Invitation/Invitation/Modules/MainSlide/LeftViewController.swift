@@ -154,6 +154,7 @@ class LeftViewController: BaseViewController, UITableViewDelegate, UITableViewDa
         if let slideMenuController = self.slideMenuController(), let controller = controller {
             slideMenuController.changeMainViewController(controller, close: true)
         }
+        
     }
     
     @IBAction func handleGesture(_ sender: UIPanGestureRecognizer) {

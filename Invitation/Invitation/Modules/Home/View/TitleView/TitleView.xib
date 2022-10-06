@@ -19,16 +19,16 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sw4-qL-vcP">
-                    <rect key="frame" x="0.0" y="0.0" width="414" height="40"/>
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="24.5"/>
                     <subviews>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cVA-BC-Y7f">
-                            <rect key="frame" x="0.0" y="0.0" width="187" height="40"/>
+                            <rect key="frame" x="0.0" y="0.0" width="187" height="24.5"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <fontDescription key="fontDescription" name="PlayfairDisplay-Bold" family="Playfair Display" pointSize="17"/>
                             <textInputTraits key="textInputTraits"/>
                         </textField>
                         <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="❦" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VCK-oK-XIT">
-                            <rect key="frame" x="195" y="0.0" width="24" height="40"/>
+                            <rect key="frame" x="195" y="0.0" width="24" height="24.5"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="24" id="HVV-6D-fjB"/>
                             </constraints>
@@ -37,7 +37,7 @@
                             <textInputTraits key="textInputTraits"/>
                         </textField>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="inX-Gz-JLm">
-                            <rect key="frame" x="227" y="0.0" width="187" height="40"/>
+                            <rect key="frame" x="227" y="0.0" width="187" height="24.5"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <fontDescription key="fontDescription" name="PlayfairDisplay-Bold" family="Playfair Display" pointSize="17"/>
                             <textInputTraits key="textInputTraits"/>
@@ -45,7 +45,6 @@
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="40" id="2Xx-ml-2bu"/>
                         <constraint firstAttribute="width" constant="414" id="5iQ-wh-5KW"/>
                         <constraint firstItem="VCK-oK-XIT" firstAttribute="centerX" secondItem="Sw4-qL-vcP" secondAttribute="centerX" id="7ik-pr-QW0"/>
                         <constraint firstItem="VCK-oK-XIT" firstAttribute="top" secondItem="Sw4-qL-vcP" secondAttribute="top" id="7qd-7P-EYP"/>

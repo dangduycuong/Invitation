@@ -7,9 +7,10 @@
 //
 
 import UIKit
+import WebKit
 
-class DirectVC: BaseViewController, UIWebViewDelegate {
-    @IBOutlet weak var webView: UIWebView!
+class DirectVC: BaseViewController, WKNavigationDelegate {
+    @IBOutlet weak var webView: WKWebView!
     
     var latitude: String?
     var longitude: String?
@@ -18,22 +19,14 @@ class DirectVC: BaseViewController, UIWebViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        webView.delegate = self
+        webView.navigationDelegate = self
         
         loadAddress()
-        if(stringTitle.isEmpty){
-            self.title = "Invitation"
-        } else {
-            self.title = stringTitle
-        }
-        setRightBarButton()
+        navigationBarButtonItems([(ItemType.back, ItemPosition.left), (.rightReload, .right)])
     }
     
-    func setRightBarButton() {
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: self, action: #selector(onClickedReload))
-        
-        let bar = UIBarButtonItem(image: #imageLiteral(resourceName: "icons8-reboot"), style: .plain, target: self, action: #selector(onClickedReload))
-        navigationItem.rightBarButtonItem = bar
+    override func reloadAction() {
+        loadAddress()
     }
     
     func getLocation(){
@@ -52,40 +45,29 @@ class DirectVC: BaseViewController, UIWebViewDelegate {
             }
         }
     }
-    
-    func webViewDidStartLoad(_ webView: UIWebView) {
-        print("webViewDidStartLoad")
+    func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
         showLoading()
     }
     
-    func webViewDidFinishLoad(_ webView: UIWebView) {
-        print("webViewDidFinishLoad")
+    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
         hideLoading()
     }
     
-    
-    func webView(_ webView: UIWebView, didFailLoadWithError error: Error) {
-        print("didFailLoadWithError")
+    func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
         hideLoading()
     }
     
     func loadAddress() {
         let latitude = self.latitude ?? ""
         let longitude = self.longitude ?? ""
-        let url = """
-        https://www.google.com/maps/dir//\(latitude),\(longitude)/@\(latitude),\(longitude)z/data=!4m2!4m1!3e0
-        """
-        let myURL = URL(string: url)
-        let myRequest = URLRequest(url: myURL!)
-        webView.loadRequest(myRequest)
-        print("Sucessfully")
+        var urlComponents = URLComponents()
+        urlComponents.scheme = "https"
+        urlComponents.host = "www.google.com"
+        urlComponents.path = "/maps/dir//\(latitude),\(longitude)/@\(latitude),\(longitude)z/data=!4m2!4m1!3e0"
+        if let url = urlComponents.url {
+            let request = URLRequest(url: url, cachePolicy: .useProtocolCachePolicy, timeoutInterval: 10)
+            webView.load(request)
+        }
     }
-    
-    
-    @objc func onClickedReload(_ sender: Any) {
-        loadAddress()
-    }
-    
-    // MARK: Actions
     
 }

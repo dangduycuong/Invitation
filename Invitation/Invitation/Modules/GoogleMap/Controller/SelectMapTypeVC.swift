@@ -7,11 +7,12 @@
 //
 
 import UIKit
+import GoogleMaps
 
 class SelectMapTypeVC: BaseViewController {
 
     @IBOutlet weak var tableView: UITableView!
-    var selectMapType: ((_ mapType: MapType) -> Void)?
+    var selectMapType: ((_ mapType: GMSMapViewType) -> Void)?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,7 +34,20 @@ extension SelectMapTypeVC: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        selectMapType?(MapType.all[indexPath.row])
+        var mapType = GMSMapViewType.normal
+        switch MapType.all[indexPath.row] {
+        case .normal:
+            mapType = .normal
+        case .satellite:
+            mapType = .satellite
+        case .terrain:
+            mapType = .terrain
+        case .hybrid:
+            mapType = .hybrid
+        case .none:
+            mapType = .none
+        }
+        selectMapType?(mapType)
         dismiss(animated: true)
     }
     

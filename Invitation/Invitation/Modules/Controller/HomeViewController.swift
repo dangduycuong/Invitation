@@ -433,8 +433,9 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             displayItemSelectLabel.text = "Đã chọn: \(itemForDelete)/\(countDisplay)"
             tableView.reloadData()
         } else {
-            let vc = Storyboard.Main.guestDetailsVC()
-            
+            guard let vc = R.storyboard.main.customerDetailVC() else {
+                return
+            }
             vc.detailKhach = suggestKhachMoi[indexPath.row]
             title = ""
             vc.title = "Thông tin chi tiết"
