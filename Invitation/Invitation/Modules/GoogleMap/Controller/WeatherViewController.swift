@@ -134,6 +134,7 @@ extension WeatherViewController {
         targetView.layer.cornerRadius = 20
         eyeTargetView.layer.cornerRadius = 4
         eyeTargetView.backgroundColor = UIColor(hexString: "E3E7ED")
+        title = infoCustomer.name
     }
     
     override func openRightMenu() {

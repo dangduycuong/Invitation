@@ -68,13 +68,27 @@ class LeftViewController: BaseViewController, UITableViewDelegate, UITableViewDa
         }
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        fillData()
+    }
+    
     func setDisplay() {
         navigationController?.navigationBar.isHidden = true
-        avatarImageView.layer.cornerRadius = 60
-        husbandLabel.font = UIFont(name: "Georgia-Bold", size: 17)
-        husbandLabel.textColor = .white
-        wifeLabel.font = UIFont(name: "Georgia-Bold", size: 17)
-        wifeLabel.textColor = .white
+//        avatarImageView.layer.cornerRadius = 60
+//        husbandLabel.font = UIFont(name: "Georgia-Bold", size: 17)
+//        husbandLabel.textColor = .white
+//        wifeLabel.font = UIFont(name: "Georgia-Bold", size: 17)
+//        wifeLabel.textColor = .white
+    }
+    
+    private func fillData() {
+        if let wife = UserDefaults.standard.string(forKey: UserDefaultKey.wife.rawValue) {
+            wifeLabel.text = wife
+        }
+        if let husband = UserDefaults.standard.string(forKey: UserDefaultKey.husband.rawValue) {
+            husbandLabel.text = husband
+        }
     }
     
     override func setShadowView(view: UIView) {

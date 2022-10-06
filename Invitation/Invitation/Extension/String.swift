@@ -68,3 +68,9 @@ extension String {
         return (self as NSString).boolValue
     }
 }
+
+extension String {
+    func unaccent() -> String {
+        return self.folding(options: .diacriticInsensitive, locale: .current)
+    }
+}

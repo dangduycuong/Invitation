@@ -71,13 +71,13 @@ class GuestDetailsVC: BaseViewController {
     
     var listBirth = [String]()
     var suggestBirth = [String]()
+    private var viewModel = GuestDetailsViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         scrollview.delaysContentTouches = false
         fillData()
         setDelegate()
-        isEnableHideKeyBoardWhenTouchInScreen = true
         
         let year = Calendar.current.component(.year, from: Date())
         for item in 1900...year {
@@ -95,6 +95,7 @@ class GuestDetailsVC: BaseViewController {
         switchStatus.set(width: 45, height: 25)
         setDisplay()
         navigationBarButtonItems([(.back, .left)])
+        viewModel.setupData(customer: detailKhach)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -143,7 +144,6 @@ class GuestDetailsVC: BaseViewController {
         
         //optional
         dropdown.selectionAction = { [unowned self] (index: Int, item: String) in
-            print("Selected item: \(item) at index: \(index)")
             self.quanHeTextView.text = self.listSuggestRelation[index]
             self.relationLabel.isHidden = true
             self.quanHeTextView.resignFirstResponder()
@@ -261,29 +261,6 @@ class GuestDetailsVC: BaseViewController {
         noteTextView.text = detailKhach.note
     }
     
-    func updateCustomer() -> ThongTinKhachMoiModel {
-        let newInfo = ThongTinKhachMoiModel()
-        newInfo.id = detailKhach.id
-        newInfo.name = tenTextView.text
-        newInfo.age = tuoiTextView.text
-        newInfo.address = diaChiTextView.text
-        newInfo.relation = quanHeTextView.text
-        if let longitude = longitudeTextView.text.toDouble(), let latitude = latitudeTextView.text.toDouble() {
-            newInfo.longitude = longitude
-            newInfo.latitude = latitude
-        }
-        newInfo.giftMoney = diMungTextView.text.replacingOccurrences(of: " ", with: "")
-        newInfo.moneyReceived = nhanTextView.text.replacingOccurrences(of: " ", with: "")
-        
-        if let phone = phoneTextView.text {
-            newInfo.phone = phone
-        }
-        newInfo.status = switchStatus.isOn
-        newInfo.note = noteTextView.text
-        
-        return newInfo
-    }
-    
     @IBAction func tapCancel(_ sender: Any) {
         navigationController?.popViewController(animated: true)
     }
@@ -312,9 +289,19 @@ class GuestDetailsVC: BaseViewController {
         showAlertWithConfirm(type: .notice, message: "Bạn chắc chắn muốn cập nhật thông tin đã chỉnh sửa", cancel: {
             
         }, ok: {
-            //            self.editKhachMoi()
             if let closureUpdate = self.closureUpdate {
-                closureUpdate(self.updateCustomer())
+                self.viewModel.newInfoCustomer.name = self.tenTextView.text
+                self.viewModel.newInfoCustomer.age = self.tuoiTextView.text
+                self.viewModel.newInfoCustomer.relation = self.quanHeTextView.text
+                self.viewModel.newInfoCustomer.giftMoney = self.diMungTextView.text.replacingOccurrences(of: " ", with: "")
+                self.viewModel.newInfoCustomer.moneyReceived = self.nhanTextView.text.replacingOccurrences(of: " ", with: "")
+                
+                if let phone = self.phoneTextView.text {
+                    self.viewModel.newInfoCustomer.phone = phone
+                }
+                self.viewModel.newInfoCustomer.status = self.switchStatus.isOn
+                self.viewModel.newInfoCustomer.note = self.noteTextView.text
+                closureUpdate(self.viewModel.newInfoCustomer)
             }
             self.navigationController?.popViewController(animated: true)
         })
@@ -330,6 +317,7 @@ class GuestDetailsVC: BaseViewController {
             self.latitudeTextView.text = "\(infoCustomer.latitude)"
             self.longitudeTextView.text = "\(infoCustomer.longitude)"
             self.diaChiTextView.text = infoCustomer.address
+            self.viewModel.updateAddressCustomer(customer: infoCustomer)
         }
         navigationController?.pushViewController(vc, animated: true)
     }
@@ -370,10 +358,13 @@ class GuestDetailsVC: BaseViewController {
             vc.infoKM = detailKhach
             vc.editDiMung = true
             vc.closureFinished = { [weak self] data in
-                self?.diMungTextView.text = data.toString().toDouble()?.displayDecimal(groupingSeparator: " ", decimalSeparator: ",")
-                self?.validateOwe()
-                self?.changeDiMungByPopup = false
-                self?.editDiMungButton.setImage(#imageLiteral(resourceName: "icons8-delete_sign_filled"), for: .normal)
+                guard let `self` = self else {
+                    return
+                }
+                self.diMungTextView.text = data.toString().toDouble()?.displayDecimal(groupingSeparator: " ", decimalSeparator: ",")
+                self.validateOwe()
+                self.changeDiMungByPopup = false
+                self.editDiMungButton.setImage(#imageLiteral(resourceName: "icons8-delete_sign_filled"), for: .normal)
             }
             present(vc, animated: true, completion: nil)
         } else {
@@ -405,8 +396,6 @@ class GuestDetailsVC: BaseViewController {
             validateOwe()
         }
     }
-    
-    
     
     func validateOwe() {
         if let diMung = diMungTextView.text, let nhan = nhanTextView.text {

@@ -45,7 +45,6 @@ class HistoryVC: BaseViewController, UITextFieldDelegate {
         
         setShadowView(view: searchView)
         searchTextField.delegate = self
-        isEnableHideKeyBoardWhenTouchInScreen = true
         pageLabel.setDefaultTitleField()
         
         isLoading = true

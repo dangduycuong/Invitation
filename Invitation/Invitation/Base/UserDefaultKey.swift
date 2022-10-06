@@ -15,4 +15,6 @@ enum UserDefaultKey: String {
     case usernameAuthentication = "usernameAuthentication"
     case passwordAuthentication = "passwordAuthentication"
     case isLogin
+    case wife
+    case husband
 }

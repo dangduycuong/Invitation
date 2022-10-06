@@ -60,8 +60,6 @@ class HomeViewController: BaseViewController, UITextFieldDelegate {
         //        let bar = UIBarButtonItem(image: #imageLiteral(resourceName: "icons8-menu"), style: .plain, target: self, action: #selector(openMenu))
         //        navigationItem.leftBarButtonItem = bar
         self.navigationBarButtonItems([(ItemType.leftMenu, ItemPosition.left)])
-        
-        isEnableHideKeyBoardWhenTouchInScreen = true
         registerCell()
         segmentedControl.selectedSegmentIndex = 0
         
@@ -181,15 +179,14 @@ class HomeViewController: BaseViewController, UITextFieldDelegate {
     }
     
     func getResultFilter(array: [ThongTinKhachMoiModel]) {
-        guard let text = searchTextField.text?.lowercased() else {
+        guard let text = searchTextField.text?.lowercased().unaccent() else {
             return
         }
         suggestKhachMoi = array.filter { (data: ThongTinKhachMoiModel) in
-            if let name = data.name?.lowercased(), let address = data.address?.lowercased(), let phone = data.phone?.lowercased() {
+            if let name = data.name?.lowercased().unaccent(), let address = data.address?.lowercased().unaccent(), let phone = data.phone?.lowercased().unaccent() {
                 if name.range(of: text) != nil || address.range(of: text) != nil || phone.range(of: text) != nil {
                     return true
                 }
-                
             }
             return false
         }

@@ -34,7 +34,6 @@ class PhonebookVC: BaseViewController, UITableViewDataSource, UITableViewDelegat
         tableView.register(ChoseContactCell.nib(), forCellReuseIdentifier: ChoseContactCell.identifier())
         getListContact()
         count = suggestContacts.count
-        isEnableHideKeyBoardWhenTouchInScreen = true
         setShadowView(view: searchView)
     }
     

@@ -14,26 +14,6 @@ class BaseViewController: UIViewController, UIGestureRecognizerDelegate {
     var spinner = UIActivityIndicatorView()
     let alertService = AlertService()
     lazy var isLoading: Bool = false
-    private var enableHideKeyBoardWhenTouchInScreen: Bool = true
-    var isEnableHideKeyBoardWhenTouchInScreen: Bool {
-        get {
-            return self.enableHideKeyBoardWhenTouchInScreen ? true : false
-        }
-        
-        set {
-            self.enableHideKeyBoardWhenTouchInScreen = newValue
-            if self.enableHideKeyBoardWhenTouchInScreen {
-                let touchOnScreen = UITapGestureRecognizer(target: self, action: #selector(self.touchOnScreen))
-                touchOnScreen.delegate = self
-                touchOnScreen.cancelsTouchesInView = false
-                view.addGestureRecognizer(touchOnScreen)
-            }
-        }
-    }
-    
-    @objc func touchOnScreen() {
-        view.endEditing(true)
-    }
     
     func setSpinner() {
         view.alpha = 0.95

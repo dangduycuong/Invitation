@@ -119,6 +119,8 @@
 		FA8A56EB28EC35C600806E37 /* MarkerInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA8A56E228EC35C600806E37 /* MarkerInfoView.xib */; };
 		FA8A56EE28EC35D700806E37 /* Weather.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA8A56ED28EC35D700806E37 /* Weather.storyboard */; };
 		FA8A56F228EC38CE00806E37 /* GuestDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8A56F128EC38CE00806E37 /* GuestDetailsVC.swift */; };
+		FA92E73128EE7489006DB462 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA92E73028EE7489006DB462 /* HomeViewModel.swift */; };
+		FA92E73428EE794D006DB462 /* GuestDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA92E73328EE794D006DB462 /* GuestDetailsViewModel.swift */; };
 		FADDBA3428EDE62500381236 /* TitleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FADDBA3328EDE62500381236 /* TitleView.xib */; };
 		FADDBA3628EDE63600381236 /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADDBA3528EDE63600381236 /* TitleView.swift */; };
 /* End PBXBuildFile section */
@@ -266,6 +268,8 @@
 		FA8A56E228EC35C600806E37 /* MarkerInfoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MarkerInfoView.xib; sourceTree = "<group>"; };
 		FA8A56ED28EC35D700806E37 /* Weather.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Weather.storyboard; sourceTree = "<group>"; };
 		FA8A56F128EC38CE00806E37 /* GuestDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestDetailsVC.swift; sourceTree = "<group>"; };
+		FA92E73028EE7489006DB462 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		FA92E73328EE794D006DB462 /* GuestDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestDetailsViewModel.swift; sourceTree = "<group>"; };
 		FADDBA3328EDE62500381236 /* TitleView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TitleView.xib; sourceTree = "<group>"; };
 		FADDBA3528EDE63600381236 /* TitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -801,6 +805,7 @@
 		FA8A56EF28EC385600806E37 /* DetailCustomer */ = {
 			isa = PBXGroup;
 			children = (
+				FA92E73228EE7937006DB462 /* ViewModel */,
 				FA8A56F028EC386A00806E37 /* Controller */,
 			);
 			path = DetailCustomer;
@@ -814,9 +819,26 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		FA92E72F28EE7476006DB462 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FA92E73028EE7489006DB462 /* HomeViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		FA92E73228EE7937006DB462 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FA92E73328EE794D006DB462 /* GuestDetailsViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		FADDBA3028EDE5FF00381236 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				FA92E72F28EE7476006DB462 /* ViewModel */,
 				FADDBA3128EDE60700381236 /* View */,
 			);
 			path = Home;
@@ -1190,6 +1212,7 @@
 				FA8A56E928EC35C600806E37 /* RealtimeWeather.swift in Sources */,
 				CE20440D2581BEE800662FBB /* NSMutableAttributedString.swift in Sources */,
 				CE4029EB25787DAC0043EE29 /* DropDownCell.swift in Sources */,
+				FA92E73428EE794D006DB462 /* GuestDetailsViewModel.swift in Sources */,
 				FA370D2728ED6A6D004C41CA /* Identifier.swift in Sources */,
 				CE402A272578B65F0043EE29 /* Int.swift in Sources */,
 				CE402A1525787E480043EE29 /* ThemKhachMoiVC.swift in Sources */,
@@ -1197,6 +1220,7 @@
 				CE0DF6E82580C95B00953B46 /* PopupEditTienMungVC.swift in Sources */,
 				FA8A56C828EC32DD00806E37 /* SlideMenuController.swift in Sources */,
 				FA8A56E828EC35C600806E37 /* PlaceMarker.swift in Sources */,
+				FA92E73128EE7489006DB462 /* HomeViewModel.swift in Sources */,
 				CE2484DA257A04BF0054E198 /* TutorialVC.swift in Sources */,
 				FA8A56CD28EC346300806E37 /* R.generated.swift in Sources */,
 				FADDBA3628EDE63600381236 /* TitleView.swift in Sources */,

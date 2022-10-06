@@ -52,7 +52,6 @@ class ChiTietGhiNoVC: BaseViewController {
         for item in 1900...year {
             listBirth.append("\(item)")
         }
-        isEnableHideKeyBoardWhenTouchInScreen = true
         navigationBarButtonItems([(.back, .left)])
     }
     

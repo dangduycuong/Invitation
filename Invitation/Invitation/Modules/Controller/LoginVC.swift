@@ -57,7 +57,6 @@ class LoginVC: BaseViewController, UITextFieldDelegate {
         setFirstRunApp()
         
         setupNotification()
-        isEnableHideKeyBoardWhenTouchInScreen = true
         let font = UIFont(name: "TrebuchetMS-Bold", size: 18)
         currentTimeLabel.font = font
         nameLabel.font = UIFont(name: "TrebuchetMS-Bold", size: 20)
@@ -169,7 +168,6 @@ class LoginVC: BaseViewController, UITextFieldDelegate {
         }
         passwordTextField.isSecureTextEntry = true
         showPasswordImageView.image = #imageLiteral(resourceName: "icons8-hide-1")
-        isEnableHideKeyBoardWhenTouchInScreen = true
         loginButton.setDefaultButton()
         isHidenShowPassword = passwordTextField.text == ""
         

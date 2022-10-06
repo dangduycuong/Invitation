@@ -61,7 +61,6 @@ class ThemKhachMoiVC: BaseViewController, UITextViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        isEnableHideKeyBoardWhenTouchInScreen = true
         print(Realm.Configuration.defaultConfiguration)
         
         generalPlaceHolder()
@@ -217,12 +216,17 @@ class ThemKhachMoiVC: BaseViewController, UITextViewDelegate {
     }
     
     @IBAction func tapSelectInMap(_ sender: Any) {
-        title = ""
-        let vc = Storyboard.Main.chonDiaDiemVC()
-        vc.titleString = "Nhà khách mời"
-        vc.passCoordinate = { [weak self] infoKM in
-            self?.dataKM.longitude = infoKM.longitude
-            self?.dataKM.latitude = infoKM.latitude
+        guard let vc = R.storyboard.weather.weatherViewController() else {
+            return
+        }
+        vc.selectAddress = { [weak self] customer in
+            guard let `self` = self else {
+                return
+            }
+            self.dataKM.latitude = customer.latitude
+            self.dataKM.longitude = customer.longitude
+            self.dataKM.address = customer.address
+            self.diaChiTextView.text = customer.address
         }
         navigationController?.pushViewController(vc, animated: true)
     }
