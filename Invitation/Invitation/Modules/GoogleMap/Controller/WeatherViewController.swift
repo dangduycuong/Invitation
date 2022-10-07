@@ -78,10 +78,14 @@ class WeatherViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        NotificationCenter.default.addObserver(self, selector: #selector(changeMapType), name: .changeMapType, object: nil)
         setupUI()
+        viewModel.delegate = self
+        loadMap()
+    }
+    
+    private func loadMap() {
         locationManager.delegate = self
-        
+        mapView.delegate = self
         if CLLocationManager.locationServicesEnabled() {
             locationManager.requestLocation()
             mapView.isMyLocationEnabled = true
@@ -89,9 +93,6 @@ class WeatherViewController: BaseViewController {
         } else {
             locationManager.requestWhenInUseAuthorization()
         }
-        
-        viewModel.delegate = self
-        mapView.delegate = self
         mapView.mapType = .satellite
         if infoCustomer.latitude != 0.0 {
             let camera = GMSCameraPosition(latitude: infoCustomer.latitude, longitude: infoCustomer.longitude, zoom: 17)

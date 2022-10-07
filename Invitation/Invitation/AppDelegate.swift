@@ -15,6 +15,7 @@ import RealmSwift
 
 //let googleApiKey = "AIzaSyC6a50plf6zJbvuBcmzBpRd3CQp4BRy1yI"
 let googleApiKey = "AIzaSyBjK7ZifDuLbogjhWx9XjpIcRlczC6c-I0"
+//let googleApiKey = "AIzaSyDEV1eVytNfdldXm11y7RYuaAe6vwkvYbM"
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate {

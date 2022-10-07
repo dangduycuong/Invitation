@@ -56,7 +56,7 @@ extension UIViewController {
                 
             case .rightReload:
                 let backButton = UIButton(frame: CGRect(x: 0, y: 0, width: 25, height: 44))
-                backButton.setImage(R.image.dang_xuat(), for: .normal)
+                backButton.setImage(R.image.icons8Refresh(), for: .normal)
                 backButton.showsTouchWhenHighlighted = true
                 backButton.addTarget(self, action: #selector(reloadAction), for: .touchUpInside)
                 backButton.contentEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: -10)
